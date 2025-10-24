@@ -33,23 +33,17 @@ export default {
   ],
   coverageThreshold: {
     global: {
-      branches: 80,
-      functions: 80,
-      lines: 80,
-      statements: 80,
+      branches: 100,
+      functions: 100,
+      lines: 100,
+      statements: 100,
     },
-    // Per-file coverage requirements
-    './src/services/': {
-      branches: 90,
-      functions: 90,
-      lines: 90,
-      statements: 90,
-    },
-    './src/utils/': {
-      branches: 95,
-      functions: 95,
-      lines: 95,
-      statements: 95,
+    // Per-file coverage requirements - all files must have 100% coverage
+    './src/': {
+      branches: 100,
+      functions: 100,
+      lines: 100,
+      statements: 100,
     },
   },
   // Test timeout for integration tests

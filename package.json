@@ -8,7 +8,7 @@
     "build": "tsc && vite build",
     "preview": "vite preview",
     "test": "jest",
-    "test:unit": "jest --testPathPattern='(unit|__tests__)' --coverage",
+    "test:unit": "jest --testPathPattern='(unit|__tests__)' --coverage --coverageReporters=text --coverageReporters=lcov --coverageReporters=html",
     "test:integration": "jest --testPathPattern='integration' --coverage",
     "test:e2e": "playwright test",
     "test:all": "npm run test:unit && npm run test:integration && npm run test:e2e",
@@ -22,6 +22,9 @@
     "lighthouse": "lighthouse http://localhost:4173 --output=html --output-path=./lighthouse-report.html",
     "pre-commit": "npm run lint && npm run format:check && npm run type-check && npm run test:unit && npm run build",
     "pre-push": "npm run test:all && npm run build && npm audit",
+    "test:build": "./scripts/test-build.sh",
+    "test:coverage": "jest --coverage --coverageReporters=text --coverageReporters=lcov --coverageReporters=html --passWithNoTests",
+    "test:coverage:check": "npm run test:coverage && echo '✅ All coverage requirements met!'",
     "prepare": "husky install"
   },
   "dependencies": {

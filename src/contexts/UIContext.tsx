@@ -3,6 +3,7 @@ import React, {
   useContext,
   useState,
   useCallback,
+  useEffect,
   ReactNode,
 } from "react";
 
@@ -48,7 +49,7 @@ export const UIProvider: React.FC<UIProviderProps> = ({ children }) => {
   }, []);
 
   // Load theme from localStorage on mount
-  React.useEffect(() => {
+  useEffect(() => {
     try {
       const savedTheme = localStorage.getItem("theme") as "light" | "dark" | null;
       if (savedTheme) {
@@ -58,6 +59,7 @@ export const UIProvider: React.FC<UIProviderProps> = ({ children }) => {
       // Handle cases where localStorage is not available (e.g., in tests)
       console.warn("localStorage not available:", error);
     }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   const value: UIContextType = {

@@ -2,6 +2,8 @@ import React, { memo } from 'react';
 import { RecipeAnalysis, Recipe } from '../../types';
 import { Button } from '../ui/Button';
 import { SubstitutionCard } from './SubstitutionCard';
+import { NutritionalInfoCard } from './NutritionalInfoCard';
+import { RecipeScalingCalculator } from './RecipeScalingCalculator';
 
 interface AnalysisResultsProps {
   analysis: RecipeAnalysis;
@@ -51,11 +53,27 @@ export const AnalysisResults: React.FC<AnalysisResultsProps> = memo(({
       <div className="space-y-4">
         <h3 className="text-lg font-semibold">Substitution Recommendations</h3>
         {analysis.substitutions.map((substitution, index) => (
-          <SubstitutionCard
-            key={index}
-            substitution={substitution}
-          />
+          <div key={index} className="space-y-3">
+            <SubstitutionCard
+              substitution={substitution}
+            />
+            <NutritionalInfoCard
+              substitution={substitution}
+              originalIngredient={analysis.glutenIngredients[0]?.name || ''}
+            />
+          </div>
         ))}
+      </div>
+
+      {/* Recipe Scaling Calculator */}
+      <div className="mt-6">
+        <RecipeScalingCalculator
+          ingredients={analysis.glutenIngredients}
+          originalServings={4}
+          onScaledIngredients={(scaledIngredients) => {
+            console.log('Scaled ingredients:', scaledIngredients);
+          }}
+        />
       </div>
       
       <div className="flex flex-wrap gap-4">

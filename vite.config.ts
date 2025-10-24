@@ -3,7 +3,7 @@ import react from '@vitejs/plugin-react'
 
 export default defineConfig({
   plugins: [react()],
-  base: './',
+  base: '/gluten-free-substitutions/',
   build: {
     outDir: 'dist',
     sourcemap: true,
