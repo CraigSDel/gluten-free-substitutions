@@ -74,13 +74,13 @@ export const About: React.FC = () => {
             <div className="grid md:grid-cols-3 gap-8">
               <div className="text-center">
                 <div className="w-16 h-16 bg-primary-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <span className="text-2xl">🤖</span>
+                  <span className="text-2xl">🔍</span>
                 </div>
                 <h3 className="text-lg font-semibold mb-2">
-                  AI-Powered Analysis
+                  Rule-Based Analysis
                 </h3>
                 <p className="text-gray-600">
-                  Our advanced algorithm identifies gluten-containing
+                  Our comprehensive database identifies gluten-containing
                   ingredients with high accuracy
                 </p>
               </div>

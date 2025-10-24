@@ -3,7 +3,7 @@ import ingredientsData from "../data/ingredients.json";
 
 /**
  * Engine for analyzing recipes to identify gluten-containing ingredients
- * and provide appropriate substitutions. Uses fuzzy matching for better
+ * and provide appropriate substitutions. Uses rule-based fuzzy matching for better
  * ingredient detection and maintains a comprehensive database of gluten
  * ingredients and their alternatives.
  */

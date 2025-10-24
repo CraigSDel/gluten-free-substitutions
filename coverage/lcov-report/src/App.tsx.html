@@ -25,7 +25,7 @@
             <div class='fl pad1y space-right2'>
                 <span class="strong">0% </span>
                 <span class="quiet">Statements</span>
-                <span class='fraction'>0/31</span>
+                <span class='fraction'>0/32</span>
             </div>
         
             
@@ -46,7 +46,7 @@
             <div class='fl pad1y space-right2'>
                 <span class="strong">0% </span>
                 <span class="quiet">Lines</span>
-                <span class='fraction'>0/16</span>
+                <span class='fraction'>0/17</span>
             </div>
         
             
@@ -114,24 +114,30 @@
 <a name='L49'></a><a href='#L49'>49</a>
 <a name='L50'></a><a href='#L50'>50</a>
 <a name='L51'></a><a href='#L51'>51</a>
-<a name='L52'></a><a href='#L52'>52</a></td><td class="line-coverage quiet"><span class="cline-any cline-no">&nbsp;</span>
+<a name='L52'></a><a href='#L52'>52</a>
+<a name='L53'></a><a href='#L53'>53</a>
+<a name='L54'></a><a href='#L54'>54</a>
+<a name='L55'></a><a href='#L55'>55</a></td><td class="line-coverage quiet"><span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -173,6 +179,7 @@
 <span class="cstat-no" title="statement not covered" >import { Header } from './components/layout/Header';</span>
 <span class="cstat-no" title="statement not covered" >import { Footer } from './components/layout/Footer';</span>
 <span class="cstat-no" title="statement not covered" >import { LoadingSpinner } from './components/ui/LoadingSpinner';</span>
+<span class="cstat-no" title="statement not covered" >import { ErrorBoundary } from './components/ErrorBoundary';</span>
 &nbsp;
 // Lazy load pages for code splitting
 const HomePage = <span class="cstat-no" title="statement not covered" >lazy(<span class="fstat-no" title="function not covered" >() =</span>&gt; <span class="cstat-no" title="statement not covered" ><span class="cstat-no" title="statement not covered" ><span class="fstat-no" title="function not covered" >import('</span>./pages/HomePage').t</span>hen(<span class="fstat-no" title="function not covered" >module </span>=&gt; (<span class="cstat-no" title="statement not covered" >{ default: module.HomePage })</span>))</span>;</span>
@@ -183,36 +190,38 @@ const About = <span class="cstat-no" title="statement not covered" >lazy(<span c
 &nbsp;
 const App: React.FC = <span class="cstat-no" title="statement not covered" ><span class="fstat-no" title="function not covered" >() =</span>&gt; {</span>
 <span class="cstat-no" title="statement not covered" >  return (</span>
-    &lt;Router&gt;
-      &lt;UIProvider&gt;
-        &lt;RecipeProvider&gt;
-          &lt;IngredientProvider&gt;
-            &lt;div className="min-h-screen bg-gray-50"&gt;
-              &lt;Header /&gt;
-              &lt;main&gt;
-                &lt;Suspense fallback={
-                  &lt;div className="flex items-center justify-center min-h-screen"&gt;
-                    &lt;div className="text-center"&gt;
-                      &lt;LoadingSpinner size="lg" className="mx-auto mb-4" /&gt;
-                      &lt;p className="text-gray-600"&gt;Loading...&lt;/p&gt;
+    &lt;ErrorBoundary&gt;
+      &lt;Router&gt;
+        &lt;UIProvider&gt;
+          &lt;RecipeProvider&gt;
+            &lt;IngredientProvider&gt;
+              &lt;div className="min-h-screen bg-gray-50"&gt;
+                &lt;Header /&gt;
+                &lt;main&gt;
+                  &lt;Suspense fallback={
+                    &lt;div className="flex items-center justify-center min-h-screen"&gt;
+                      &lt;div className="text-center"&gt;
+                        &lt;LoadingSpinner size="lg" className="mx-auto mb-4" /&gt;
+                        &lt;p className="text-gray-600"&gt;Loading...&lt;/p&gt;
+                      &lt;/div&gt;
                     &lt;/div&gt;
-                  &lt;/div&gt;
-                }&gt;
-                  &lt;Routes&gt;
-                    &lt;Route path="/" element={&lt;HomePage /&gt;} /&gt;
-                    &lt;Route path="/converter" element={&lt;RecipeConverter /&gt;} /&gt;
-                    &lt;Route path="/ingredients" element={&lt;IngredientDatabase /&gt;} /&gt;
-                    &lt;Route path="/tips" element={&lt;CookingTips /&gt;} /&gt;
-                    &lt;Route path="/about" element={&lt;About /&gt;} /&gt;
-                  &lt;/Routes&gt;
-                &lt;/Suspense&gt;
-              &lt;/main&gt;
-              &lt;Footer /&gt;
-            &lt;/div&gt;
-          &lt;/IngredientProvider&gt;
-        &lt;/RecipeProvider&gt;
-      &lt;/UIProvider&gt;
-    &lt;/Router&gt;
+                  }&gt;
+                    &lt;Routes&gt;
+                      &lt;Route path="/" element={&lt;HomePage /&gt;} /&gt;
+                      &lt;Route path="/converter" element={&lt;RecipeConverter /&gt;} /&gt;
+                      &lt;Route path="/ingredients" element={&lt;IngredientDatabase /&gt;} /&gt;
+                      &lt;Route path="/tips" element={&lt;CookingTips /&gt;} /&gt;
+                      &lt;Route path="/about" element={&lt;About /&gt;} /&gt;
+                    &lt;/Routes&gt;
+                  &lt;/Suspense&gt;
+                &lt;/main&gt;
+                &lt;Footer /&gt;
+              &lt;/div&gt;
+            &lt;/IngredientProvider&gt;
+          &lt;/RecipeProvider&gt;
+        &lt;/UIProvider&gt;
+      &lt;/Router&gt;
+    &lt;/ErrorBoundary&gt;
   );
 };
 &nbsp;
@@ -223,7 +232,7 @@ const App: React.FC = <span class="cstat-no" title="statement not covered" ><spa
             <div class='footer quiet pad2 space-top1 center small'>
                 Code coverage generated by
                 <a href="https://istanbul.js.org/" target="_blank" rel="noopener noreferrer">istanbul</a>
-                at 2025-10-24T16:45:40.534Z
+                at 2025-10-24T17:07:04.175Z
             </div>
         <script src="../prettify.js"></script>
         <script>

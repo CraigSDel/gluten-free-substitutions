@@ -2,7 +2,7 @@ import { Ingredient, Substitution } from '../types';
 
 /**
  * Service for converting recipes from gluten-containing to gluten-free versions.
- * Handles ingredient substitution, ratio calculations, and instruction modifications.
+ * Uses rule-based logic for ingredient substitution, ratio calculations, and instruction modifications.
  */
 export class RecipeConverter {
   /**

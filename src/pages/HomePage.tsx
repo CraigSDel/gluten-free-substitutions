@@ -63,9 +63,9 @@ export const HomePage: React.FC = () => {
               <div className="w-16 h-16 bg-secondary-100 rounded-full flex items-center justify-center mx-auto mb-4">
                 <span className="text-2xl">🔍</span>
               </div>
-              <h3 className="text-lg font-semibold mb-2">2. AI Analysis</h3>
+              <h3 className="text-lg font-semibold mb-2">2. Smart Analysis</h3>
               <p className="text-gray-600">
-                Our system identifies gluten-containing ingredients
+                Our rule-based system identifies gluten-containing ingredients
                 automatically
               </p>
             </div>
