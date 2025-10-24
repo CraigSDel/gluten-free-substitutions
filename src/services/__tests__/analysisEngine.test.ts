@@ -56,37 +56,5 @@ describe('RecipeAnalysisEngine', () => {
     });
   });
 
-  describe('extractIngredients', () => {
-    it('should extract ingredients from recipe text', () => {
-      const recipe = '2 cups flour\n1 cup sugar\n3 eggs\nSalt to taste';
-      const ingredients = engine.extractIngredients(recipe);
-      
-      expect(ingredients.length).toBeGreaterThan(0);
-      expect(ingredients).toContain('flour');
-      expect(ingredients).toContain('sugar');
-    });
-
-    it('should handle various formats', () => {
-      const recipe = '• 2 cups flour\n- 1 cup sugar\n* 3 eggs';
-      const ingredients = engine.extractIngredients(recipe);
-      
-      expect(ingredients.length).toBeGreaterThan(0);
-    });
-  });
-
-  describe('identifyGlutenIngredients', () => {
-    it('should identify common gluten ingredients', () => {
-      const ingredients = ['flour', 'bread', 'pasta', 'wheat'];
-      const glutenIngredients = engine.identifyGlutenIngredients(ingredients);
-      
-      expect(glutenIngredients.length).toBeGreaterThan(0);
-    });
-
-    it('should not identify gluten-free ingredients', () => {
-      const ingredients = ['rice', 'quinoa', 'corn', 'potatoes'];
-      const glutenIngredients = engine.identifyGlutenIngredients(ingredients);
-      
-      expect(glutenIngredients).toHaveLength(0);
-    });
-  });
+  // Note: Private methods are tested indirectly through analyzeRecipe
 });

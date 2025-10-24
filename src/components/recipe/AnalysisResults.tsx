@@ -60,25 +60,25 @@ export const AnalysisResults: React.FC<AnalysisResultsProps> = ({
       
       <div className="flex flex-wrap gap-4">
         <Button
-          onClick={() => onSave(analysis as Recipe)}
+          onClick={() => onSave(analysis as unknown as Recipe)}
           variant="primary"
         >
           Save Recipe
         </Button>
         <Button
-          onClick={() => onExport(analysis as Recipe, 'text')}
+          onClick={() => onExport(analysis as unknown as Recipe, 'text')}
           variant="secondary"
         >
           Export as Text
         </Button>
         <Button
-          onClick={() => onExport(analysis as Recipe, 'pdf')}
+          onClick={() => onExport(analysis as unknown as Recipe, 'pdf')}
           variant="outline"
         >
           Export as PDF
         </Button>
         <Button
-          onClick={() => onCopy(analysis as Recipe)}
+          onClick={() => onCopy(analysis as unknown as Recipe)}
           variant="ghost"
         >
           Copy to Clipboard

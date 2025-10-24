@@ -1,4 +1,3 @@
-import React from 'react';
 import { render, screen, fireEvent } from '../../utils/testUtils';
 import { AnalysisResults } from '../recipe/AnalysisResults';
 import { RecipeAnalysis } from '../../types';
@@ -7,10 +6,13 @@ const mockAnalysis: RecipeAnalysis = {
   hasGluten: true,
   glutenIngredients: [
     {
+      id: 'flour-1',
       name: 'all-purpose flour',
+      amount: 2,
+      unit: 'cups',
+      isGlutenFree: false,
       confidence: 0.95,
-      category: 'flour',
-      glutenSource: 'wheat'
+      substitutions: []
     }
   ],
   substitutions: [
@@ -18,7 +20,7 @@ const mockAnalysis: RecipeAnalysis = {
       id: 'flour-1',
       originalIngredient: 'all-purpose flour',
       substituteIngredient: 'almond flour',
-      ratio: '1:1',
+      ratio: 1,
       unit: 'cup',
       difficulty: 'easy',
       cookingNotes: 'May need additional binding agent',
@@ -27,7 +29,7 @@ const mockAnalysis: RecipeAnalysis = {
     }
   ],
   difficulty: 'medium',
-  timeAdjustment: 5,
+  cookingTimeAdjustment: 5,
   confidence: 0.9
 };
 
