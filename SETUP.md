@@ -1,14 +1,27 @@
 # GitHub Pages Setup
 
-## ✅ **Deployment Status**
+## ⚠️ **Deployment Status - NEEDS ATTENTION**
 
-The website is configured for automatic deployment to GitHub Pages.
+The website is configured for automatic deployment to GitHub Pages, but there are 404 errors for assets.
 
-**Website URL:** https://craigsdel.github.io/gluten-free-substitutions
+**Website URL:** https://craigsdel.github.io/gluten-free-substitutions  
+**Current Issue:** Assets not loading (404 errors)
+
+## 🚨 **Immediate Action Required**
+
+### **Step 1: Enable GitHub Pages**
+1. Go to: https://github.com/CraigSDel/gluten-free-substitutions/settings/pages
+2. Under **Source**, select **GitHub Actions**
+3. Click **Save**
+
+### **Step 2: Check Deployment**
+1. Go to **Actions** tab in the repository
+2. Look for the latest workflow run
+3. Ensure it completes successfully
 
 ## 🚀 **Automatic Deployment**
 
-The website automatically deploys when you push changes to the main branch:
+The website should automatically deploy when you push changes to the main branch:
 
 1. **GitHub Actions** builds the project
 2. **Deploys to GitHub Pages** 
