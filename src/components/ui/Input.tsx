@@ -1,5 +1,6 @@
-import React from 'react';
+import React, { useMemo } from 'react';
 import { clsx } from 'clsx';
+import { generateId } from '../../utils/idGenerator';
 
 interface InputProps extends React.InputHTMLAttributes<HTMLInputElement> {
   label?: string;
@@ -15,7 +16,7 @@ export const Input: React.FC<InputProps> = ({
   id,
   ...props
 }) => {
-  const inputId = id || `input-${Math.random().toString(36).substr(2, 9)}`;
+  const inputId = useMemo(() => id || generateId('input'), [id]);
 
   return (
     <div className="space-y-1">

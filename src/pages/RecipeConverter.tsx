@@ -64,7 +64,7 @@ export const RecipeConverter: React.FC = () => {
                 </div>
               ) : currentRecipe ? (
                 <AnalysisResults
-                  analysis={currentRecipe as any}
+                  analysis={currentRecipe.analysis}
                   onSave={saveRecipe}
                   onExport={exportRecipe}
                   onCopy={copyRecipe}

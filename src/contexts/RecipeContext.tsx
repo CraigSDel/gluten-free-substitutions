@@ -1,4 +1,4 @@
-import React, { createContext, useContext, useState, useCallback, ReactNode } from 'react';
+import React, { createContext, useContext, useState, useCallback, useMemo, ReactNode } from 'react';
 import { Recipe } from '../types';
 import { RecipeAnalysisEngine } from '../services/analysisEngine';
 import { ExportService } from '../services/exportService';
@@ -35,7 +35,7 @@ export const RecipeProvider: React.FC<RecipeProviderProps> = ({ children }) => {
   const [isLoading, setIsLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
 
-  const analysisEngine = new RecipeAnalysisEngine();
+  const analysisEngine = useMemo(() => new RecipeAnalysisEngine(), []);
 
   const analyzeRecipe = useCallback(async (text: string) => {
     setIsLoading(true);
@@ -73,7 +73,7 @@ export const RecipeProvider: React.FC<RecipeProviderProps> = ({ children }) => {
     } finally {
       setIsLoading(false);
     }
-  }, []);
+  }, [analysisEngine]);
 
   const saveRecipe = useCallback((recipe: Recipe) => {
     const updatedHistory = [recipe, ...recipeHistory.filter(r => r.id !== recipe.id)];

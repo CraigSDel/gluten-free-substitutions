@@ -1,5 +1,6 @@
-import React from 'react';
+import React, { useMemo } from 'react';
 import { clsx } from 'clsx';
+import { generateId } from '../../utils/idGenerator';
 
 interface TextAreaProps extends React.TextareaHTMLAttributes<HTMLTextAreaElement> {
   label?: string;
@@ -15,7 +16,7 @@ export const TextArea: React.FC<TextAreaProps> = ({
   id,
   ...props
 }) => {
-  const textAreaId = id || `textarea-${Math.random().toString(36).substr(2, 9)}`;
+  const textAreaId = useMemo(() => id || generateId('textarea'), [id]);
 
   return (
     <div className="space-y-1">

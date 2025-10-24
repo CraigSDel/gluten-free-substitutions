@@ -58,7 +58,7 @@ export class IngredientDatabase {
   }
 
   getIngredientsByCategory(category: string): string[] {
-    return (this.data.categories as any)[category] || [];
+    return (this.data.categories as Record<string, string[]>)[category] || [];
   }
 
   private normalizeIngredient(name: string): string {

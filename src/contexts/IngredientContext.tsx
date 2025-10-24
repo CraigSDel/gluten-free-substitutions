@@ -1,4 +1,4 @@
-import React, { createContext, useContext, useState, useCallback, ReactNode } from 'react';
+import React, { createContext, useContext, useState, useCallback, useMemo, ReactNode } from 'react';
 import { GlutenFreeIngredient, Substitution } from '../types';
 import { IngredientDatabase } from '../services/ingredientDatabase';
 
@@ -31,7 +31,7 @@ export const IngredientProvider: React.FC<IngredientProviderProps> = ({ children
   const [searchResults, setSearchResults] = useState<GlutenFreeIngredient[]>([]);
   const [searchQuery, setSearchQuery] = useState('');
 
-  const ingredientDatabase = new IngredientDatabase();
+  const ingredientDatabase = useMemo(() => new IngredientDatabase(), []);
 
   const searchIngredients = useCallback((query: string) => {
     setSearchQuery(query);
@@ -42,19 +42,19 @@ export const IngredientProvider: React.FC<IngredientProviderProps> = ({ children
     
     const results = ingredientDatabase.searchIngredients(query);
     setSearchResults(results);
-  }, []);
+  }, [ingredientDatabase]);
 
   const getSubstitution = useCallback((ingredient: string) => {
     return ingredientDatabase.findSubstitution(ingredient);
-  }, []);
+  }, [ingredientDatabase]);
 
   const getAllCategories = useCallback(() => {
     return ingredientDatabase.getAllCategories();
-  }, []);
+  }, [ingredientDatabase]);
 
   const getIngredientsByCategory = useCallback((category: string) => {
     return ingredientDatabase.getIngredientsByCategory(category);
-  }, []);
+  }, [ingredientDatabase]);
 
   const value: IngredientContextType = {
     ingredients,
