@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { memo } from 'react';
 import { RecipeAnalysis, Recipe } from '../../types';
 import { Button } from '../ui/Button';
 import { SubstitutionCard } from './SubstitutionCard';
@@ -10,7 +10,7 @@ interface AnalysisResultsProps {
   onCopy: (recipe: Recipe) => void;
 }
 
-export const AnalysisResults: React.FC<AnalysisResultsProps> = ({
+export const AnalysisResults: React.FC<AnalysisResultsProps> = memo(({
   analysis,
   onSave,
   onExport,
@@ -86,4 +86,4 @@ export const AnalysisResults: React.FC<AnalysisResultsProps> = ({
       </div>
     </div>
   );
-};
+});

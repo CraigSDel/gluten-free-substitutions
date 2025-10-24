@@ -49,9 +49,14 @@ export const UIProvider: React.FC<UIProviderProps> = ({ children }) => {
 
   // Load theme from localStorage on mount
   React.useEffect(() => {
-    const savedTheme = localStorage.getItem("theme") as "light" | "dark" | null;
-    if (savedTheme) {
-      setTheme(savedTheme);
+    try {
+      const savedTheme = localStorage.getItem("theme") as "light" | "dark" | null;
+      if (savedTheme) {
+        setTheme(savedTheme);
+      }
+    } catch (error) {
+      // Handle cases where localStorage is not available (e.g., in tests)
+      console.warn("localStorage not available:", error);
     }
   }, []);
 

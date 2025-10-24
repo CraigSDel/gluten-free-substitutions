@@ -1,6 +1,12 @@
 import { Ingredient, Substitution, RecipeAnalysis } from "../types";
 import ingredientsData from "../data/ingredients.json";
 
+/**
+ * Engine for analyzing recipes to identify gluten-containing ingredients
+ * and provide appropriate substitutions. Uses fuzzy matching for better
+ * ingredient detection and maintains a comprehensive database of gluten
+ * ingredients and their alternatives.
+ */
 export class RecipeAnalysisEngine {
   private glutenIngredients: Set<string>;
   private substitutionMap: Map<string, Substitution[]>;

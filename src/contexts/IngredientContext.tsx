@@ -17,6 +17,7 @@ interface IngredientContextType {
   getSubstitution: (ingredient: string) => Substitution[];
   getAllCategories: () => string[];
   getIngredientsByCategory: (category: string) => string[];
+  getIngredientsByCategoryWithData: (category: string) => GlutenFreeIngredient[];
 }
 
 const IngredientContext = createContext<IngredientContextType | undefined>(
@@ -78,6 +79,21 @@ export const IngredientProvider: React.FC<IngredientProviderProps> = ({
     [ingredientDatabase],
   );
 
+  const getIngredientsByCategoryWithData = useCallback(
+    (category: string) => {
+      const ingredientNames = ingredientDatabase.getIngredientsByCategory(category);
+      const ingredientsWithData: GlutenFreeIngredient[] = [];
+      
+      ingredientNames.forEach(name => {
+        const results = ingredientDatabase.searchIngredients(name);
+        ingredientsWithData.push(...results);
+      });
+      
+      return ingredientsWithData;
+    },
+    [ingredientDatabase],
+  );
+
   const value: IngredientContextType = {
     ingredients,
     searchResults,
@@ -86,6 +102,7 @@ export const IngredientProvider: React.FC<IngredientProviderProps> = ({
     getSubstitution,
     getAllCategories,
     getIngredientsByCategory,
+    getIngredientsByCategoryWithData,
   };
 
   return (
