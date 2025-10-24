@@ -1,0 +1,60 @@
+{
+  "tips": [
+    {
+      "id": "binding-agents",
+      "title": "Gluten-Free Binding Agents",
+      "content": "When converting recipes, you may need to add binding agents like xanthan gum, guar gum, or psyllium husk to replace the binding properties of gluten.",
+      "category": "baking",
+      "difficulty": "medium"
+    },
+    {
+      "id": "flour-blends",
+      "title": "Creating Gluten-Free Flour Blends",
+      "content": "A good all-purpose gluten-free flour blend typically contains rice flour, potato starch, and tapioca starch. Add xanthan gum for better texture.",
+      "category": "baking",
+      "difficulty": "easy"
+    },
+    {
+      "id": "mixing-techniques",
+      "title": "Mixing Techniques",
+      "content": "Gluten-free batters often need more mixing than traditional recipes. Mix until smooth and well-combined, but don't overmix as it can make baked goods tough.",
+      "category": "baking",
+      "difficulty": "easy"
+    },
+    {
+      "id": "resting-time",
+      "title": "Resting Time",
+      "content": "Let gluten-free batters rest for 10-15 minutes before baking. This allows the flours to hydrate properly and improves texture.",
+      "category": "baking",
+      "difficulty": "easy"
+    },
+    {
+      "id": "oven-temperature",
+      "title": "Oven Temperature Adjustments",
+      "content": "Gluten-free baked goods often benefit from slightly lower oven temperatures (25-50°F lower) and longer baking times to prevent over-browning.",
+      "category": "baking",
+      "difficulty": "medium"
+    },
+    {
+      "id": "storage-tips",
+      "title": "Storage Tips",
+      "content": "Gluten-free baked goods tend to dry out faster. Store in airtight containers and consider adding a slice of bread to maintain moisture.",
+      "category": "storage",
+      "difficulty": "easy"
+    },
+    {
+      "id": "cross-contamination",
+      "title": "Preventing Cross-Contamination",
+      "content": "Always use separate utensils, cutting boards, and storage containers for gluten-free ingredients. Clean surfaces thoroughly before preparing gluten-free foods.",
+      "category": "safety",
+      "difficulty": "easy"
+    },
+    {
+      "id": "label-reading",
+      "title": "Reading Labels",
+      "content": "Always check labels for hidden gluten sources like malt, modified food starch, and natural flavors. Look for 'gluten-free' certification when possible.",
+      "category": "shopping",
+      "difficulty": "easy"
+    }
+  ]
+}

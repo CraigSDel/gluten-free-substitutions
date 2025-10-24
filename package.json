@@ -1,0 +1,47 @@
+{
+  "name": "gluten-free-substitutions",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc && vite build",
+    "preview": "vite preview",
+    "test": "jest",
+    "test:watch": "jest --watch",
+    "test:e2e": "playwright test",
+    "lint": "eslint src --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
+    "format": "prettier --write src/**/*.{ts,tsx,js,jsx}",
+    "type-check": "tsc --noEmit",
+    "prepare": "husky install"
+  },
+  "dependencies": {
+    "@tailwindcss/postcss": "^4.1.16",
+    "clsx": "^1.2.0",
+    "framer-motion": "^10.0.0",
+    "lucide-react": "^0.263.0",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-hook-form": "^7.43.0",
+    "react-router-dom": "^6.8.0",
+    "tailwind-merge": "^1.10.0"
+  },
+  "devDependencies": {
+    "@testing-library/jest-dom": "^5.16.0",
+    "@testing-library/react": "^13.4.0",
+    "@types/react": "^18.2.0",
+    "@types/react-dom": "^18.2.0",
+    "@vitejs/plugin-react": "^4.0.0",
+    "autoprefixer": "^10.4.0",
+    "eslint": "^8.45.0",
+    "husky": "^8.0.0",
+    "jest": "^29.6.0",
+    "jest-environment-jsdom": "^29.6.0",
+    "lint-staged": "^13.2.0",
+    "postcss": "^8.4.0",
+    "prettier": "^3.0.0",
+    "tailwindcss": "^3.3.0",
+    "typescript": "^5.0.0",
+    "vite": "^4.4.0"
+  }
+}
