@@ -1,120 +1,120 @@
-# GlutenFree Substitutions
+# Gluten-Free Recipe Substitutions
 
 A privacy-first web application that helps users convert regular recipes to gluten-free versions with accurate ingredient substitutions.
 
-## Features
+## 🌟 Features
 
-- **Instant Recipe Conversion**: Convert any recipe to gluten-free in seconds
-- **Privacy-First**: No user data collection, no registration required
-- **Accurate Substitutions**: Tested ingredient alternatives with proper ratios
-- **Mobile-Optimized**: Responsive design for all devices
+- **Recipe Conversion**: Paste any recipe and get gluten-free substitutions
+- **Ingredient Database**: 200+ gluten ingredients with 300+ alternatives
+- **Privacy-First**: No data collection, local storage only
+- **Mobile Optimized**: Works perfectly on all devices
 - **Free Forever**: No hidden costs or premium features
 
-## Tech Stack
+## 🚀 Quick Start
 
-- **Frontend**: React 18 with TypeScript
-- **Styling**: Tailwind CSS
-- **Build Tool**: Vite
-- **State Management**: React Context API
-- **Routing**: React Router
-- **Icons**: Lucide React
-- **Deployment**: GitHub Pages
-
-## Getting Started
-
-### Prerequisites
-
-- Node.js 18+ (LTS recommended)
-- npm or yarn
-
-### Installation
-
-1. Clone the repository:
-```bash
-git clone https://github.com/username/gluten-free-substitutions.git
-cd gluten-free-substitutions
-```
-
-2. Install dependencies:
+### Development
 ```bash
 npm install
-```
-
-3. Start the development server:
-```bash
 npm run dev
 ```
 
-4. Open [http://localhost:3000](http://localhost:3000) in your browser.
+### Build
+```bash
+npm run build
+```
 
-## Available Scripts
+### Test
+```bash
+npm test
+```
 
+## 🛠️ Tech Stack
+
+- **React 18** with TypeScript
+- **Tailwind CSS** for styling
+- **Vite** for fast development
+- **GitHub Pages** for hosting
+
+## 📱 Live Demo
+
+Visit: [https://craigsdel.github.io/gluten-free-substitutions](https://craigsdel.github.io/gluten-free-substitutions)
+
+## 🔧 Development
+
+### Prerequisites
+- Node.js 18+
+- npm or yarn
+
+### Setup
+1. Clone the repository
+2. Install dependencies: `npm install`
+3. Start development server: `npm run dev`
+4. Open http://localhost:3000
+
+### Scripts
 - `npm run dev` - Start development server
 - `npm run build` - Build for production
 - `npm run preview` - Preview production build
-- `npm run test` - Run unit tests
+- `npm test` - Run tests
 - `npm run lint` - Run ESLint
 - `npm run format` - Format code with Prettier
-- `npm run type-check` - Run TypeScript type checking
 
-## Project Structure
+## 📋 Project Structure
 
 ```
 src/
-├── components/          # Reusable UI components
-│   ├── ui/             # Basic UI components
-│   ├── recipe/         # Recipe-specific components
-│   └── layout/         # Layout components
-├── pages/              # Page components
-├── contexts/           # React Context providers
-├── services/           # Business logic services
-├── data/               # Static data files
-├── types/              # TypeScript type definitions
-├── utils/              # Utility functions
-└── styles/             # Global styles
+├── components/     # React components
+├── pages/         # Page components
+├── contexts/      # State management
+├── services/      # Business logic
+├── data/          # JSON databases
+├── types/         # TypeScript types
+└── styles/        # Global styles
 ```
 
-## Key Components
+## 🎯 Core Features
 
-- **RecipeInput**: Text area for recipe input with validation
-- **AnalysisResults**: Displays conversion results and substitutions
-- **SubstitutionCard**: Shows individual ingredient substitutions
-- **IngredientDatabase**: Searchable database of gluten-free alternatives
+### Recipe Analysis
+- Automatic gluten ingredient detection
+- Accurate substitution recommendations
+- Cooking technique adjustments
+- Difficulty assessment
 
-## Data Structure
+### Ingredient Database
+- Comprehensive gluten-free alternatives
+- Conversion ratios and measurements
+- Cooking tips for each substitution
+- Nutritional information
 
-The application uses JSON files for ingredient data:
+### Privacy & Security
+- No user data collection
+- Local storage only
+- No tracking or analytics
+- Client-side processing
 
-- `ingredients.json`: Gluten-containing ingredients and their substitutions
-- `cookingTips.json`: Gluten-free cooking tips and techniques
+## 🚀 Deployment
 
-## Privacy & Security
+The app is automatically deployed to GitHub Pages when changes are pushed to the main branch.
 
-- **No Data Collection**: All processing happens client-side
-- **Local Storage Only**: Recipe history stored in browser
-- **No Tracking**: No analytics or user tracking
-- **HTTPS Only**: Secure connections enforced
+### Manual Deployment
+1. Build the project: `npm run build`
+2. Deploy the `dist` folder to your hosting provider
 
-## Contributing
+## 📄 License
+
+MIT License - see LICENSE file for details
+
+## 🤝 Contributing
 
 1. Fork the repository
-2. Create a feature branch: `git checkout -b feature/amazing-feature`
-3. Commit changes: `git commit -m 'Add amazing feature'`
-4. Push to branch: `git push origin feature/amazing-feature`
-5. Open a Pull Request
+2. Create a feature branch
+3. Make your changes
+4. Submit a pull request
 
-## License
+## 📞 Support
 
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
-
-## Medical Disclaimer
-
-This tool is for informational purposes only and is not intended as medical advice. Always consult with your healthcare provider before making significant dietary changes.
-
-## Support
-
-For support, please open an issue on GitHub or contact us at [email protected].
+For issues or questions, please open an issue on GitHub.
 
 ---
 
-Made with ❤️ for the gluten-free community.# Deployment Trigger - Fri Oct 24 18:18:49 CEST 2025
+**Built with ❤️ for the gluten-free community**
