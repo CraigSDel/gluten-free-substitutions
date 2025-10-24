@@ -4,8 +4,8 @@
 
 **Project Name:** GlutenFree Substitutions  
 **Business Objective:** Create a free, privacy-focused web tool that helps users convert regular recipes to gluten-free versions  
-**Target Audience:** People with celiac disease, gluten intolerance, or those following a gluten-free diet  
-**Market Size:** 3.1 million Americans with celiac disease + 18 million with gluten sensitivity  
+**Target Audience:** People following a gluten-free diet for any reason  
+**Market Size:** Growing gluten-free market with increasing consumer demand  
 **Hosting:** GitHub Pages (free)
 
 **Key Value Proposition:**
@@ -54,7 +54,7 @@ A user-friendly platform where people can submit any recipe (with gluten-contain
 
 ### 4.1 User Personas
 
-**Primary Persona: "Sarah the Celiac"**
+**Primary Persona: "Sarah the Gluten-Free Cook"**
 
 - **Demographics:** Age 25-45, tech-savvy, health-conscious
 - **Pain Points:** Frustrated with limited gluten-free recipe options, wants to convert family recipes
@@ -63,16 +63,16 @@ A user-friendly platform where people can submit any recipe (with gluten-contain
 
 **Secondary Persona: "Mike the Health-Conscious"**
 
-- **Demographics:** Age 30-50, following gluten-free diet for health reasons
+- **Demographics:** Age 30-50, following gluten-free diet for personal reasons
 - **Pain Points:** Wants to maintain favorite recipes, values privacy and simplicity
 - **Goals:** Convert recipes without complexity, avoid data collection
 - **Tech Comfort:** Medium - prefers simple, straightforward tools
 
-**Tertiary Persona: "Lisa the Caregiver"**
+**Tertiary Persona: "Lisa the Family Cook"**
 
-- **Demographics:** Age 35-55, cooking for family member with celiac disease
+- **Demographics:** Age 35-55, cooking for family members who follow gluten-free diets
 - **Pain Points:** Needs to learn gluten-free cooking, wants reliable substitutions
-- **Goals:** Provide safe, delicious meals for family member
+- **Goals:** Provide delicious meals for family members
 - **Tech Comfort:** Medium - needs clear guidance and explanations
 
 ## 5. Functional Requirements
@@ -144,8 +144,8 @@ A user-friendly platform where people can submit any recipe (with gluten-contain
 - **BR-003:** No personal information collected
 - **BR-004:** Substitution recommendations must be tested and reliable
 - **BR-005:** System must work offline after initial load
-- **BR-006:** All substitutions must be medically safe for celiac disease
-- **BR-007:** System must provide clear disclaimers about medical advice
+- **BR-006:** All substitutions must be safe for general consumption
+- **BR-007:** System must provide clear disclaimers about dietary advice
 - **BR-008:** Recipe analysis must be accurate to prevent gluten exposure
 - **BR-009:** All content must be accessible (WCAG 2.1 AA)
 - **BR-010:** System must work on mobile devices (responsive design)
@@ -716,7 +716,7 @@ gluten-free-substitutions/
 - How to use the converter
 - Common substitution questions
 - Troubleshooting guide
-- Medical disclaimers
+- Dietary disclaimers
 - Privacy policy explanation
 
 ### 8.4 Ingredient Database Specification
@@ -1092,9 +1092,9 @@ export default defineConfig({
 | ------------------------------------ | ------ | ----------- | ---------------------------------------- |
 | Low user adoption                    | High   | Medium      | SEO optimization, content marketing      |
 | Competition from established players | Medium | High        | Focus on privacy, simplicity             |
-| Legal issues with substitutions      | High   | Low         | Medical disclaimers, expert review       |
+| Legal issues with substitutions      | High   | Low         | Dietary disclaimers, expert review       |
 | Maintenance overhead                 | Medium | High        | Automated testing, documentation         |
-| Medical liability                    | High   | Low         | Clear disclaimers, expert review         |
+| Dietary liability                    | High   | Low         | Clear disclaimers, expert review         |
 | Data privacy concerns                | Medium | Low         | Privacy-first design, no data collection |
 
 ### 11.3 Risk Monitoring
@@ -1102,7 +1102,7 @@ export default defineConfig({
 - **Weekly:** Performance metrics, user feedback
 - **Monthly:** Security scans, dependency updates
 - **Quarterly:** Competitive analysis, feature assessment
-- **Annually:** Legal review, medical disclaimer updates
+- **Annually:** Legal review, dietary disclaimer updates
 
 ## 12. Project Timeline
 
@@ -1174,13 +1174,15 @@ export default defineConfig({
 ### 14.3 Legal & Compliance
 
 - **Privacy:** GDPR compliance (no data collection)
-- **Medical:** Disclaimers about celiac disease
+- **Dietary:** Disclaimers about dietary choices
 - **Accessibility:** WCAG 2.1 AA compliance
 - **Terms:** Clear terms of service
 
 ### 14.4 Required Legal Content
 
-- **Medical Disclaimer:** "This tool is for informational purposes only. Consult healthcare providers for medical advice."
+- **Dietary Disclaimer:** "This tool is for informational and educational purposes only. It is not intended as medical, health, or dietary advice. Always consult with qualified healthcare providers or registered dietitians for personalized dietary guidance. The substitutions provided are general suggestions and may not be suitable for all individuals or dietary restrictions."
+- **No Medical Claims:** "This website does not diagnose, treat, cure, or prevent any medical condition. Gluten-free substitutions are provided for general cooking purposes only."
+- **User Responsibility:** "Users are responsible for verifying ingredient safety and suitability for their specific dietary needs and restrictions."
 - **Privacy Policy:** "No personal data is collected, stored, or transmitted."
 - **Terms of Service:** "Use at your own risk. Substitutions are suggestions only."
 - **Cookie Policy:** "Only essential cookies used. No tracking cookies."
@@ -2088,7 +2090,7 @@ npm run analyze
 - **Code Quality**: Maintain high standards for maintainability and scalability
 - **Testing**: Comprehensive testing strategy for reliability
 - **Documentation**: Clear documentation for future maintenance
-- **Medical Safety**: All substitutions must be safe for celiac disease
+- **Dietary Safety**: All substitutions must be safe for general consumption
 - **Legal Compliance**: Clear disclaimers and terms of service
 - **Implementation Ready**: All technical specifications provided for complete development
 
