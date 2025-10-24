@@ -1,0 +1,21 @@
+#!/usr/bin/env sh
+. "$(dirname -- "$0")/_/husky.sh"
+
+echo "🧪 Running pre-commit quality checks..."
+
+# Run lint-staged for staged files
+npx lint-staged
+
+# Run unit tests with coverage
+echo "🧪 Running unit tests..."
+npm run test:unit
+
+# Run type checking
+echo "🔍 Running TypeScript checks..."
+npm run type-check
+
+# Run build to ensure everything compiles
+echo "🏗️ Running production build..."
+npm run build
+
+echo "✅ Pre-commit checks passed!"
