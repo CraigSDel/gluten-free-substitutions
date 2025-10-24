@@ -39,8 +39,14 @@ jobs:
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
-    
     steps:
+      - name: Check GitHub Pages Status
+        run: |
+          echo "Checking if GitHub Pages is enabled..."
+          echo "If this fails, please enable GitHub Pages in repository settings:"
+          echo "1. Go to Settings → Pages"
+          echo "2. Source: GitHub Actions"
+          echo "3. Save settings"
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4
         with:
