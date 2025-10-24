@@ -20,11 +20,12 @@ describe('RecipeConverter Behavior Tests', () => {
       isLoading: false,
       error: null,
       analyzeRecipe: mockAnalyzeRecipe,
+      analyzeStructuredRecipe: jest.fn(),
       saveRecipe: mockSaveRecipe,
       exportRecipe: mockExportRecipe,
       copyRecipe: mockCopyRecipe,
       deleteRecipe: jest.fn(),
-      recipes: [],
+      recipeHistory: [],
     });
   });
 
@@ -92,7 +93,8 @@ describe('RecipeConverter Behavior Tests', () => {
         exportRecipe: mockExportRecipe,
         copyRecipe: mockCopyRecipe,
         deleteRecipe: jest.fn(),
-        recipes: [],
+        recipeHistory: [],
+        analyzeStructuredRecipe: jest.fn(),
       });
 
       render(<RecipeConverter />);
@@ -113,7 +115,8 @@ describe('RecipeConverter Behavior Tests', () => {
         exportRecipe: mockExportRecipe,
         copyRecipe: mockCopyRecipe,
         deleteRecipe: jest.fn(),
-        recipes: [],
+        recipeHistory: [],
+        analyzeStructuredRecipe: jest.fn(),
       });
 
       render(<RecipeConverter />);
@@ -142,7 +145,8 @@ describe('RecipeConverter Behavior Tests', () => {
         exportRecipe: mockExportRecipe,
         copyRecipe: mockCopyRecipe,
         deleteRecipe: jest.fn(),
-        recipes: [],
+        recipeHistory: [],
+        analyzeStructuredRecipe: jest.fn(),
       });
 
       render(<RecipeConverter />);
@@ -172,7 +176,8 @@ describe('RecipeConverter Behavior Tests', () => {
         exportRecipe: mockExportRecipe,
         copyRecipe: mockCopyRecipe,
         deleteRecipe: jest.fn(),
-        recipes: [],
+        recipeHistory: [],
+        analyzeStructuredRecipe: jest.fn(),
       });
 
       render(<RecipeConverter />);
@@ -202,7 +207,8 @@ describe('RecipeConverter Behavior Tests', () => {
         exportRecipe: mockExportRecipe,
         copyRecipe: mockCopyRecipe,
         deleteRecipe: jest.fn(),
-        recipes: [],
+        recipeHistory: [],
+        analyzeStructuredRecipe: jest.fn(),
       });
 
       render(<RecipeConverter />);
@@ -225,7 +231,8 @@ describe('RecipeConverter Behavior Tests', () => {
         exportRecipe: mockExportRecipe,
         copyRecipe: mockCopyRecipe,
         deleteRecipe: jest.fn(),
-        recipes: [],
+        recipeHistory: [],
+        analyzeStructuredRecipe: jest.fn(),
       });
 
       render(<RecipeConverter />);
@@ -240,7 +247,7 @@ describe('RecipeConverter Behavior Tests', () => {
       render(<RecipeConverter />);
 
       const textarea = screen.getByRole('textbox');
-      const button = screen.getByRole('button', { name: /analyze/i });
+      screen.getByRole('button', { name: /analyze/i });
 
       // Tab navigation should work
       textarea.focus();

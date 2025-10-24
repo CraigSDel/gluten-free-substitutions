@@ -23,9 +23,9 @@
         <div class='clearfix'>
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">0% </span>
+                <span class="strong">20.28% </span>
                 <span class="quiet">Statements</span>
-                <span class='fraction'>0/69</span>
+                <span class='fraction'>14/69</span>
             </div>
         
             
@@ -37,16 +37,16 @@
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">0% </span>
+                <span class="strong">18.18% </span>
                 <span class="quiet">Functions</span>
-                <span class='fraction'>0/11</span>
+                <span class='fraction'>2/11</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">0% </span>
+                <span class="strong">16.92% </span>
                 <span class="quiet">Lines</span>
-                <span class='fraction'>0/65</span>
+                <span class='fraction'>11/65</span>
             </div>
         
             
@@ -229,7 +229,7 @@
 <a name='L164'></a><a href='#L164'>164</a>
 <a name='L165'></a><a href='#L165'>165</a>
 <a name='L166'></a><a href='#L166'>166</a>
-<a name='L167'></a><a href='#L167'>167</a></td><td class="line-coverage quiet"><span class="cline-any cline-no">&nbsp;</span>
+<a name='L167'></a><a href='#L167'>167</a></td><td class="line-coverage quiet"><span class="cline-any cline-yes">4x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -238,8 +238,8 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">4x</span>
+<span class="cline-any cline-yes">4x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -253,12 +253,12 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">4x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">4x</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -267,13 +267,13 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">4x</span>
+<span class="cline-any cline-yes">24x</span>
+<span class="cline-any cline-yes">24x</span>
+<span class="cline-any cline-yes">24x</span>
+<span class="cline-any cline-yes">24x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">24x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -395,7 +395,7 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js"><span class="cstat-no" title="statement not covered" >import React, {</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">import React, {
   createContext,
   useContext,
   useState,
@@ -404,8 +404,8 @@
   ReactNode,
 } from "react";
 import { Recipe } from "../types";
-<span class="cstat-no" title="statement not covered" >import { RecipeAnalysisEngine } from "../services/analysisEngine";</span>
-<span class="cstat-no" title="statement not covered" >import { ExportService } from "../services/exportService";</span>
+import { RecipeAnalysisEngine } from "../services/analysisEngine";
+import { ExportService } from "../services/exportService";
 &nbsp;
 interface RecipeContextType {
   currentRecipe: Recipe | null;
@@ -419,9 +419,9 @@ interface RecipeContextType {
   copyRecipe: (recipe: Recipe) =&gt; Promise&lt;void&gt;;
 }
 &nbsp;
-const RecipeContext = <span class="cstat-no" title="statement not covered" >createContext&lt;RecipeContextType | undefined&gt;(undefined);</span>
+const RecipeContext = createContext&lt;RecipeContextType | undefined&gt;(undefined);
 &nbsp;
-export const <span class="cstat-no" title="statement not covered" >useRecipe = <span class="cstat-no" title="statement not covered" ><span class="fstat-no" title="function not covered" >(</span>) =</span>&gt; {</span>
+export const useRecipe = <span class="fstat-no" title="function not covered" >() =</span>&gt; {
   const context = <span class="cstat-no" title="statement not covered" >useContext(RecipeContext);</span>
 <span class="cstat-no" title="statement not covered" >  <span class="missing-if-branch" title="if path not taken" >I</span>if (context === undefined) {</span>
 <span class="cstat-no" title="statement not covered" >    throw new Error("useRecipe must be used within a RecipeProvider");</span>
@@ -433,13 +433,13 @@ interface RecipeProviderProps {
   children: ReactNode;
 }
 &nbsp;
-export const <span class="cstat-no" title="statement not covered" >RecipeProvider: React.FC&lt;RecipeProviderProps&gt; = <span class="cstat-no" title="statement not covered" ><span class="fstat-no" title="function not covered" >(</span>{</span> children }) =&gt; {</span>
-  const [currentRecipe, setCurrentRecipe] = <span class="cstat-no" title="statement not covered" >useState&lt;Recipe | null&gt;(null);</span>
-  const [recipeHistory, setRecipeHistory] = <span class="cstat-no" title="statement not covered" >useState&lt;Recipe[]&gt;([]);</span>
-  const [isLoading, setIsLoading] = <span class="cstat-no" title="statement not covered" >useState(false);</span>
-  const [error, setError] = <span class="cstat-no" title="statement not covered" >useState&lt;string | null&gt;(null);</span>
+export const RecipeProvider: React.FC&lt;RecipeProviderProps&gt; = ({ children }) =&gt; {
+  const [currentRecipe, setCurrentRecipe] = useState&lt;Recipe | null&gt;(null);
+  const [recipeHistory, setRecipeHistory] = useState&lt;Recipe[]&gt;([]);
+  const [isLoading, setIsLoading] = useState(false);
+  const [error, setError] = useState&lt;string | null&gt;(null);
 &nbsp;
-  const analysisEngine = <span class="cstat-no" title="statement not covered" >useMemo(<span class="fstat-no" title="function not covered" >() =</span>&gt; <span class="cstat-no" title="statement not covered" >new RecipeAnalysisEngine(),</span> []);</span>
+  const analysisEngine = useMemo(() =&gt; new RecipeAnalysisEngine(), []);
 &nbsp;
   const analyzeRecipe = <span class="cstat-no" title="statement not covered" >useCallback(</span>
 <span class="fstat-no" title="function not covered" >    async </span>(text: string) =&gt; {
@@ -568,7 +568,7 @@ export const <span class="cstat-no" title="statement not covered" >RecipeProvide
             <div class='footer quiet pad2 space-top1 center small'>
                 Code coverage generated by
                 <a href="https://istanbul.js.org/" target="_blank" rel="noopener noreferrer">istanbul</a>
-                at 2025-10-24T16:38:52.338Z
+                at 2025-10-24T16:45:40.534Z
             </div>
         <script src="../../prettify.js"></script>
         <script>

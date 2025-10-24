@@ -6,8 +6,9 @@ import React, {
   useMemo,
   ReactNode,
 } from "react";
-import { Recipe } from "../types";
+import { Recipe, Ingredient } from "../types";
 import { RecipeAnalysisEngine } from "../services/analysisEngine";
+import { RecipeConverter } from "../services/recipeConverter";
 import { ExportService } from "../services/exportService";
 
 interface RecipeContextType {
@@ -16,6 +17,7 @@ interface RecipeContextType {
   isLoading: boolean;
   error: string | null;
   analyzeRecipe: (text: string) => Promise<void>;
+  analyzeStructuredRecipe: (recipe: { title: string; ingredients: Array<{ amount: string; unit: string; name: string }>; instructions: string[] }) => Promise<void>;
   saveRecipe: (recipe: Recipe) => void;
   deleteRecipe: (id: string) => void;
   exportRecipe: (recipe: Recipe, format: "text" | "pdf") => void;
@@ -75,6 +77,66 @@ export const RecipeProvider: React.FC<RecipeProviderProps> = ({ children }) => {
         };
 
         setCurrentRecipe(recipe);
+      } catch (err) {
+        setError("Failed to analyze recipe. Please try again.");
+        console.error("Recipe analysis error:", err);
+      } finally {
+        setIsLoading(false);
+      }
+    },
+    [analysisEngine],
+  );
+
+  const analyzeStructuredRecipe = useCallback(
+    async (recipe: { title: string; ingredients: Array<{ amount: string; unit: string; name: string }>; instructions: string[] }) => {
+      setIsLoading(true);
+      setError(null);
+
+      try {
+        const analysis = await analysisEngine.analyzeStructuredRecipe(recipe);
+
+        if (!analysis.hasGluten) {
+          setError("This recipe appears to be already gluten-free!");
+          setCurrentRecipe(null);
+          return;
+        }
+
+        // Convert the structured ingredients to our Ingredient format
+        const structuredIngredients: Ingredient[] = recipe.ingredients.map(ing => ({
+          id: Math.random().toString(36).substr(2, 9),
+          name: ing.name,
+          amount: parseFloat(ing.amount) || 1,
+          unit: ing.unit,
+          isGlutenFree: false, // Will be determined by analysis
+          confidence: 0,
+          substitutions: [],
+        }));
+
+        // Generate the converted recipe
+        const convertedRecipeData = RecipeConverter.generateConvertedRecipe(
+          recipe.title,
+          structuredIngredients,
+          recipe.instructions,
+          analysis.substitutions
+        );
+
+        // Create a recipe structure from the converted data
+        const convertedRecipe: Recipe = {
+          id: Math.random().toString(36).substr(2, 9),
+          title: convertedRecipeData.title,
+          ingredients: convertedRecipeData.ingredients,
+          instructions: convertedRecipeData.instructions,
+          servings: 4,
+          prepTime: 15,
+          cookTime: 30,
+          difficulty: convertedRecipeData.conversionSummary.difficulty,
+          originalText: `${recipe.title}\n\nIngredients:\n${recipe.ingredients.map(ing => `${ing.amount} ${ing.unit} ${ing.name}`).join('\n')}\n\nInstructions:\n${recipe.instructions.join('\n')}`,
+          convertedText: convertedRecipeData.instructions.join('\n'),
+          substitutions: analysis.substitutions,
+          createdAt: new Date(),
+        };
+
+        setCurrentRecipe(convertedRecipe);
       } catch (err) {
         setError("Failed to analyze recipe. Please try again.");
         console.error("Recipe analysis error:", err);
@@ -154,6 +216,7 @@ export const RecipeProvider: React.FC<RecipeProviderProps> = ({ children }) => {
     isLoading,
     error,
     analyzeRecipe,
+    analyzeStructuredRecipe,
     saveRecipe,
     deleteRecipe,
     exportRecipe,

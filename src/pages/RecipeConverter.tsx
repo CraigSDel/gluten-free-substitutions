@@ -1,6 +1,7 @@
-import React from "react";
+import React, { useState } from "react";
 import { useRecipe } from "../contexts/RecipeContext";
 import { RecipeInput } from "../components/recipe/RecipeInput";
+import { StructuredRecipeInput } from "../components/recipe/StructuredRecipeInput";
 import { AnalysisResults } from "../components/recipe/AnalysisResults";
 import { LoadingSpinner } from "../components/ui/LoadingSpinner";
 import { RecipeAnalysis } from "../types";
@@ -11,13 +12,20 @@ export const RecipeConverter: React.FC = () => {
     isLoading,
     error,
     analyzeRecipe,
+    analyzeStructuredRecipe,
     saveRecipe,
     exportRecipe,
     copyRecipe,
   } = useRecipe();
 
+  const [inputMode, setInputMode] = useState<'structured' | 'text'>('structured');
+
   const handleAnalyze = async (text: string) => {
     await analyzeRecipe(text);
+  };
+
+  const handleStructuredAnalyze = async (recipe: { title: string; ingredients: Array<{ amount: string; unit: string; name: string }>; instructions: string[] }) => {
+    await analyzeStructuredRecipe(recipe);
   };
 
   return (
@@ -36,14 +44,47 @@ export const RecipeConverter: React.FC = () => {
           <div className="grid lg:grid-cols-2 gap-8">
             {/* Input Section */}
             <div className="bg-white rounded-xl shadow-lg p-6">
-              <h2 className="text-xl font-semibold text-gray-900 mb-4">
-                Enter Your Recipe
-              </h2>
-              <RecipeInput
-                onAnalyze={handleAnalyze}
-                isLoading={isLoading}
-                placeholder="Paste your recipe here with ingredients and instructions..."
-              />
+              <div className="flex justify-between items-center mb-4">
+                <h2 className="text-xl font-semibold text-gray-900">
+                  Enter Your Recipe
+                </h2>
+                <div className="flex gap-2">
+                  <button
+                    onClick={() => setInputMode('structured')}
+                    className={`px-3 py-1 rounded text-sm ${
+                      inputMode === 'structured'
+                        ? 'bg-blue-600 text-white'
+                        : 'bg-gray-200 text-gray-700'
+                    }`}
+                  >
+                    Structured
+                  </button>
+                  <button
+                    onClick={() => setInputMode('text')}
+                    className={`px-3 py-1 rounded text-sm ${
+                      inputMode === 'text'
+                        ? 'bg-blue-600 text-white'
+                        : 'bg-gray-200 text-gray-700'
+                    }`}
+                  >
+                    Text
+                  </button>
+                </div>
+              </div>
+              
+              {inputMode === 'structured' ? (
+                <StructuredRecipeInput
+                  onAnalyze={handleStructuredAnalyze}
+                  isLoading={isLoading}
+                />
+              ) : (
+                <RecipeInput
+                  onAnalyze={handleAnalyze}
+                  isLoading={isLoading}
+                  placeholder="Paste your recipe here with ingredients and instructions..."
+                />
+              )}
+              
               {error && (
                 <div className="mt-4 p-4 bg-red-50 border border-red-200 rounded-lg">
                   <p className="text-red-700">{error}</p>

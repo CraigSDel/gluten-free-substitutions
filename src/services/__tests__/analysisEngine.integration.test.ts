@@ -1,13 +1,10 @@
 import { RecipeAnalysisEngine } from '../analysisEngine';
-import { IngredientDatabase } from '../ingredientDatabase';
 
 describe('RecipeAnalysisEngine Integration', () => {
   let analysisEngine: RecipeAnalysisEngine;
-  let ingredientDatabase: IngredientDatabase;
 
   beforeEach(() => {
     analysisEngine = new RecipeAnalysisEngine();
-    ingredientDatabase = new IngredientDatabase();
   });
 
   describe('Complete Recipe Analysis Flow', () => {

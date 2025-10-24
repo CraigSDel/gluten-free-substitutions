@@ -53,6 +53,25 @@ export class RecipeAnalysisEngine {
     };
   }
 
+  async analyzeStructuredRecipe(recipe: {
+    title: string;
+    ingredients: Array<{ amount: string; unit: string; name: string }>;
+    instructions: string[];
+  }): Promise<RecipeAnalysis> {
+    const glutenIngredients = this.identifyGlutenIngredientsFromStructured(recipe.ingredients);
+    const substitutions = this.findSubstitutions(glutenIngredients);
+    const difficulty = this.calculateDifficulty(substitutions);
+
+    return {
+      hasGluten: glutenIngredients.length > 0,
+      glutenIngredients,
+      difficulty,
+      substitutions,
+      cookingTimeAdjustment: this.calculateTimeAdjustment(substitutions),
+      confidence: this.calculateConfidence(glutenIngredients, substitutions),
+    };
+  }
+
   private extractIngredients(text: string): string[] {
     const patterns = [
       /(\d+(?:\.\d+)?)\s*([a-zA-Z]+)\s+([a-zA-Z\s]+)/g,
@@ -81,6 +100,17 @@ export class RecipeAnalysisEngine {
       }));
   }
 
+  private identifyGlutenIngredientsFromStructured(ingredients: Array<{ amount: string; unit: string; name: string }>): Ingredient[] {
+    return ingredients
+      .map((ingredient) => this.parseStructuredIngredient(ingredient))
+      .filter((ingredient) => this.containsGluten(ingredient.name))
+      .map((ingredient) => ({
+        ...ingredient,
+        isGlutenFree: false,
+        confidence: this.getGlutenConfidence(ingredient.name),
+      }));
+  }
+
   private parseIngredient(ingredientText: string): Ingredient {
     const parts = ingredientText.trim().split(/\s+/);
     const amount = parseFloat(parts[0]) || 1;
@@ -98,8 +128,68 @@ export class RecipeAnalysisEngine {
     };
   }
 
+  private parseStructuredIngredient(ingredient: { amount: string; unit: string; name: string }): Ingredient {
+    const amount = parseFloat(ingredient.amount) || 1;
+    const unit = ingredient.unit || "cup";
+    const name = ingredient.name.toLowerCase().trim();
+
+    return {
+      id: Math.random().toString(36).substr(2, 9),
+      name,
+      amount,
+      unit,
+      isGlutenFree: false,
+      confidence: 0,
+      substitutions: [],
+    };
+  }
+
   private containsGluten(ingredient: string): boolean {
-    return this.glutenIngredients.has(ingredient.toLowerCase());
+    const normalizedIngredient = ingredient.toLowerCase().trim();
+    
+    // Direct match
+    if (this.glutenIngredients.has(normalizedIngredient)) {
+      return true;
+    }
+
+    // Fuzzy matching for common variations
+    const fuzzyMatches = [
+      // Flour variations
+      normalizedIngredient.includes('flour') && (
+        normalizedIngredient.includes('wheat') ||
+        normalizedIngredient.includes('all-purpose') ||
+        normalizedIngredient.includes('bread') ||
+        normalizedIngredient.includes('cake') ||
+        normalizedIngredient.includes('plain')
+      ),
+      // Grain variations
+      normalizedIngredient.includes('wheat') ||
+      normalizedIngredient.includes('barley') ||
+      normalizedIngredient.includes('rye') ||
+      normalizedIngredient.includes('spelt') ||
+      normalizedIngredient.includes('triticale'),
+      // Pasta variations
+      normalizedIngredient.includes('pasta') ||
+      normalizedIngredient.includes('spaghetti') ||
+      normalizedIngredient.includes('penne') ||
+      normalizedIngredient.includes('macaroni'),
+      // Bread variations
+      normalizedIngredient.includes('bread') ||
+      normalizedIngredient.includes('croutons') ||
+      normalizedIngredient.includes('breadcrumbs'),
+      // Sauce variations
+      normalizedIngredient.includes('soy sauce') ||
+      normalizedIngredient.includes('worcestershire') ||
+      normalizedIngredient.includes('teriyaki'),
+      // Other common gluten sources
+      normalizedIngredient.includes('oats') && !normalizedIngredient.includes('gluten-free'),
+      normalizedIngredient.includes('malt'),
+      normalizedIngredient.includes('couscous'),
+      normalizedIngredient.includes('bulgur'),
+      normalizedIngredient.includes('semolina'),
+    ];
+
+    return fuzzyMatches.some(match => match);
   }
 
   private getGlutenConfidence(ingredient: string): number {

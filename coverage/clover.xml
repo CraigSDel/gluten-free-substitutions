@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1761323932350" clover="3.2.0">
-  <project timestamp="1761323932350" name="All files">
-    <metrics statements="393" coveredstatements="2" conditionals="109" coveredconditionals="1" methods="127" coveredmethods="1" elements="629" coveredelements="4" complexity="0" loc="393" ncloc="393" packages="9" files="24" classes="24"/>
+<coverage generated="1761324340545" clover="3.2.0">
+  <project timestamp="1761324340545" name="All files">
+    <metrics statements="393" coveredstatements="89" conditionals="109" coveredconditionals="2" methods="127" coveredmethods="14" elements="629" coveredelements="105" complexity="0" loc="393" ncloc="393" packages="9" files="24" classes="24"/>
     <package name="src">
       <metrics statements="16" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="16" coveredmethods="0"/>
       <file name="App.tsx" path="/Users/craigstroberg/myworkspace/gluten-free/gluten-free-substitutions/src/App.tsx">
@@ -54,13 +54,13 @@
       </file>
     </package>
     <package name="src.components.recipe">
-      <metrics statements="37" coveredstatements="0" conditionals="13" coveredconditionals="0" methods="11" coveredmethods="0"/>
+      <metrics statements="37" coveredstatements="12" conditionals="13" coveredconditionals="0" methods="11" coveredmethods="0"/>
       <file name="AnalysisResults.tsx" path="/Users/craigstroberg/myworkspace/gluten-free/gluten-free-substitutions/src/components/recipe/AnalysisResults.tsx">
-        <metrics statements="13" coveredstatements="0" conditionals="1" coveredconditionals="0" methods="7" coveredmethods="0"/>
-        <line num="1" count="0" type="stmt"/>
-        <line num="3" count="0" type="stmt"/>
-        <line num="4" count="0" type="stmt"/>
-        <line num="13" count="0" type="stmt"/>
+        <metrics statements="13" coveredstatements="4" conditionals="1" coveredconditionals="0" methods="7" coveredmethods="0"/>
+        <line num="1" count="2" type="stmt"/>
+        <line num="3" count="2" type="stmt"/>
+        <line num="4" count="2" type="stmt"/>
+        <line num="13" count="2" type="stmt"/>
         <line num="19" count="0" type="cond" truecount="0" falsecount="1"/>
         <line num="20" count="0" type="stmt"/>
         <line num="32" count="0" type="stmt"/>
@@ -72,12 +72,12 @@
         <line num="81" count="0" type="stmt"/>
       </file>
       <file name="RecipeInput.tsx" path="/Users/craigstroberg/myworkspace/gluten-free/gluten-free-substitutions/src/components/recipe/RecipeInput.tsx">
-        <metrics statements="19" coveredstatements="0" conditionals="10" coveredconditionals="0" methods="3" coveredmethods="0"/>
-        <line num="1" count="0" type="stmt"/>
-        <line num="2" count="0" type="stmt"/>
-        <line num="3" count="0" type="stmt"/>
-        <line num="4" count="0" type="stmt"/>
-        <line num="13" count="0" type="stmt"/>
+        <metrics statements="19" coveredstatements="5" conditionals="10" coveredconditionals="0" methods="3" coveredmethods="0"/>
+        <line num="1" count="2" type="stmt"/>
+        <line num="2" count="2" type="stmt"/>
+        <line num="3" count="2" type="stmt"/>
+        <line num="4" count="2" type="stmt"/>
+        <line num="13" count="2" type="stmt"/>
         <line num="19" count="0" type="stmt"/>
         <line num="20" count="0" type="stmt"/>
         <line num="22" count="0" type="stmt"/>
@@ -94,21 +94,21 @@
         <line num="40" count="0" type="stmt"/>
       </file>
       <file name="SubstitutionCard.tsx" path="/Users/craigstroberg/myworkspace/gluten-free/gluten-free-substitutions/src/components/recipe/SubstitutionCard.tsx">
-        <metrics statements="5" coveredstatements="0" conditionals="2" coveredconditionals="0" methods="1" coveredmethods="0"/>
-        <line num="1" count="0" type="stmt"/>
-        <line num="3" count="0" type="stmt"/>
-        <line num="9" count="0" type="stmt"/>
+        <metrics statements="5" coveredstatements="3" conditionals="2" coveredconditionals="0" methods="1" coveredmethods="0"/>
+        <line num="1" count="2" type="stmt"/>
+        <line num="3" count="2" type="stmt"/>
+        <line num="9" count="2" type="stmt"/>
         <line num="12" count="0" type="stmt"/>
         <line num="18" count="0" type="stmt"/>
       </file>
     </package>
     <package name="src.components.ui">
-      <metrics statements="24" coveredstatements="0" conditionals="25" coveredconditionals="0" methods="6" coveredmethods="0"/>
+      <metrics statements="24" coveredstatements="10" conditionals="25" coveredconditionals="0" methods="6" coveredmethods="0"/>
       <file name="Button.tsx" path="/Users/craigstroberg/myworkspace/gluten-free/gluten-free-substitutions/src/components/ui/Button.tsx">
-        <metrics statements="7" coveredstatements="0" conditionals="2" coveredconditionals="0" methods="1" coveredmethods="0"/>
-        <line num="1" count="0" type="stmt"/>
-        <line num="2" count="0" type="stmt"/>
-        <line num="10" count="0" type="stmt"/>
+        <metrics statements="7" coveredstatements="3" conditionals="2" coveredconditionals="0" methods="1" coveredmethods="0"/>
+        <line num="1" count="3" type="stmt"/>
+        <line num="2" count="3" type="stmt"/>
+        <line num="10" count="3" type="stmt"/>
         <line num="17" count="0" type="stmt"/>
         <line num="19" count="0" type="stmt"/>
         <line num="26" count="0" type="stmt"/>
@@ -124,36 +124,36 @@
         <line num="21" count="0" type="stmt"/>
       </file>
       <file name="LoadingSpinner.tsx" path="/Users/craigstroberg/myworkspace/gluten-free/gluten-free-substitutions/src/components/ui/LoadingSpinner.tsx">
-        <metrics statements="5" coveredstatements="0" conditionals="1" coveredconditionals="0" methods="1" coveredmethods="0"/>
-        <line num="1" count="0" type="stmt"/>
-        <line num="2" count="0" type="stmt"/>
-        <line num="9" count="0" type="stmt"/>
+        <metrics statements="5" coveredstatements="3" conditionals="1" coveredconditionals="0" methods="1" coveredmethods="0"/>
+        <line num="1" count="2" type="stmt"/>
+        <line num="2" count="2" type="stmt"/>
+        <line num="9" count="2" type="stmt"/>
         <line num="13" count="0" type="stmt"/>
         <line num="19" count="0" type="stmt"/>
       </file>
       <file name="TextArea.tsx" path="/Users/craigstroberg/myworkspace/gluten-free/gluten-free-substitutions/src/components/ui/TextArea.tsx">
-        <metrics statements="6" coveredstatements="0" conditionals="11" coveredconditionals="0" methods="2" coveredmethods="0"/>
-        <line num="1" count="0" type="stmt"/>
-        <line num="2" count="0" type="stmt"/>
-        <line num="3" count="0" type="stmt"/>
-        <line num="11" count="0" type="stmt"/>
+        <metrics statements="6" coveredstatements="4" conditionals="11" coveredconditionals="0" methods="2" coveredmethods="0"/>
+        <line num="1" count="2" type="stmt"/>
+        <line num="2" count="2" type="stmt"/>
+        <line num="3" count="2" type="stmt"/>
+        <line num="11" count="2" type="stmt"/>
         <line num="19" count="0" type="cond" truecount="0" falsecount="2"/>
         <line num="21" count="0" type="stmt"/>
       </file>
     </package>
     <package name="src.contexts">
-      <metrics statements="117" coveredstatements="0" conditionals="10" coveredconditionals="0" methods="25" coveredmethods="0"/>
+      <metrics statements="117" coveredstatements="27" conditionals="10" coveredconditionals="0" methods="25" coveredmethods="3"/>
       <file name="IngredientContext.tsx" path="/Users/craigstroberg/myworkspace/gluten-free/gluten-free-substitutions/src/contexts/IngredientContext.tsx">
-        <metrics statements="28" coveredstatements="0" conditionals="2" coveredconditionals="0" methods="7" coveredmethods="0"/>
-        <line num="1" count="0" type="stmt"/>
-        <line num="10" count="0" type="stmt"/>
-        <line num="22" count="0" type="stmt"/>
-        <line num="26" count="0" type="stmt"/>
+        <metrics statements="28" coveredstatements="5" conditionals="2" coveredconditionals="0" methods="7" coveredmethods="0"/>
+        <line num="1" count="3" type="stmt"/>
+        <line num="10" count="3" type="stmt"/>
+        <line num="22" count="3" type="stmt"/>
+        <line num="26" count="3" type="stmt"/>
         <line num="27" count="0" type="stmt"/>
         <line num="28" count="0" type="cond" truecount="0" falsecount="1"/>
         <line num="29" count="0" type="stmt"/>
         <line num="31" count="0" type="stmt"/>
-        <line num="38" count="0" type="stmt"/>
+        <line num="38" count="3" type="stmt"/>
         <line num="41" count="0" type="stmt"/>
         <line num="42" count="0" type="stmt"/>
         <line num="45" count="0" type="stmt"/>
@@ -175,22 +175,22 @@
         <line num="91" count="0" type="stmt"/>
       </file>
       <file name="RecipeContext.tsx" path="/Users/craigstroberg/myworkspace/gluten-free/gluten-free-substitutions/src/contexts/RecipeContext.tsx">
-        <metrics statements="65" coveredstatements="0" conditionals="6" coveredconditionals="0" methods="11" coveredmethods="0"/>
-        <line num="1" count="0" type="stmt"/>
-        <line num="10" count="0" type="stmt"/>
-        <line num="11" count="0" type="stmt"/>
-        <line num="25" count="0" type="stmt"/>
-        <line num="27" count="0" type="stmt"/>
+        <metrics statements="65" coveredstatements="11" conditionals="6" coveredconditionals="0" methods="11" coveredmethods="2"/>
+        <line num="1" count="4" type="stmt"/>
+        <line num="10" count="4" type="stmt"/>
+        <line num="11" count="4" type="stmt"/>
+        <line num="25" count="4" type="stmt"/>
+        <line num="27" count="4" type="stmt"/>
         <line num="28" count="0" type="stmt"/>
         <line num="29" count="0" type="cond" truecount="0" falsecount="1"/>
         <line num="30" count="0" type="stmt"/>
         <line num="32" count="0" type="stmt"/>
-        <line num="39" count="0" type="stmt"/>
-        <line num="40" count="0" type="stmt"/>
-        <line num="41" count="0" type="stmt"/>
-        <line num="42" count="0" type="stmt"/>
-        <line num="43" count="0" type="stmt"/>
-        <line num="45" count="0" type="stmt"/>
+        <line num="39" count="4" type="stmt"/>
+        <line num="40" count="24" type="stmt"/>
+        <line num="41" count="24" type="stmt"/>
+        <line num="42" count="24" type="stmt"/>
+        <line num="43" count="24" type="stmt"/>
+        <line num="45" count="24" type="stmt"/>
         <line num="47" count="0" type="stmt"/>
         <line num="49" count="0" type="stmt"/>
         <line num="50" count="0" type="stmt"/>
@@ -243,26 +243,26 @@
         <line num="163" count="0" type="stmt"/>
       </file>
       <file name="UIContext.tsx" path="/Users/craigstroberg/myworkspace/gluten-free/gluten-free-substitutions/src/contexts/UIContext.tsx">
-        <metrics statements="24" coveredstatements="0" conditionals="2" coveredconditionals="0" methods="7" coveredmethods="0"/>
-        <line num="1" count="0" type="stmt"/>
-        <line num="18" count="0" type="stmt"/>
-        <line num="20" count="0" type="stmt"/>
+        <metrics statements="24" coveredstatements="11" conditionals="2" coveredconditionals="0" methods="7" coveredmethods="1"/>
+        <line num="1" count="3" type="stmt"/>
+        <line num="18" count="3" type="stmt"/>
+        <line num="20" count="3" type="stmt"/>
         <line num="21" count="0" type="stmt"/>
         <line num="22" count="0" type="cond" truecount="0" falsecount="1"/>
         <line num="23" count="0" type="stmt"/>
         <line num="25" count="0" type="stmt"/>
-        <line num="32" count="0" type="stmt"/>
-        <line num="33" count="0" type="stmt"/>
-        <line num="34" count="0" type="stmt"/>
-        <line num="35" count="0" type="stmt"/>
-        <line num="37" count="0" type="stmt"/>
+        <line num="32" count="3" type="stmt"/>
+        <line num="33" count="84" type="stmt"/>
+        <line num="34" count="84" type="stmt"/>
+        <line num="35" count="84" type="stmt"/>
+        <line num="37" count="84" type="stmt"/>
         <line num="38" count="0" type="stmt"/>
         <line num="39" count="0" type="stmt"/>
-        <line num="42" count="0" type="stmt"/>
+        <line num="42" count="84" type="stmt"/>
         <line num="43" count="0" type="stmt"/>
-        <line num="46" count="0" type="stmt"/>
+        <line num="46" count="84" type="stmt"/>
         <line num="47" count="0" type="stmt"/>
-        <line num="51" count="0" type="stmt"/>
+        <line num="51" count="84" type="stmt"/>
         <line num="52" count="0" type="stmt"/>
         <line num="53" count="0" type="cond" truecount="0" falsecount="1"/>
         <line num="54" count="0" type="stmt"/>
@@ -271,7 +271,7 @@
       </file>
     </package>
     <package name="src.pages">
-      <metrics statements="52" coveredstatements="0" conditionals="24" coveredconditionals="0" methods="15" coveredmethods="0"/>
+      <metrics statements="52" coveredstatements="6" conditionals="24" coveredconditionals="0" methods="15" coveredmethods="0"/>
       <file name="About.tsx" path="/Users/craigstroberg/myworkspace/gluten-free/gluten-free-substitutions/src/pages/About.tsx">
         <metrics statements="5" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="0"/>
         <line num="1" count="0" type="stmt"/>
@@ -327,13 +327,13 @@
         <line num="85" count="0" type="stmt"/>
       </file>
       <file name="RecipeConverter.tsx" path="/Users/craigstroberg/myworkspace/gluten-free/gluten-free-substitutions/src/pages/RecipeConverter.tsx">
-        <metrics statements="10" coveredstatements="0" conditionals="6" coveredconditionals="0" methods="2" coveredmethods="0"/>
-        <line num="1" count="0" type="stmt"/>
-        <line num="2" count="0" type="stmt"/>
-        <line num="3" count="0" type="stmt"/>
-        <line num="4" count="0" type="stmt"/>
-        <line num="5" count="0" type="stmt"/>
-        <line num="8" count="0" type="stmt"/>
+        <metrics statements="10" coveredstatements="6" conditionals="6" coveredconditionals="0" methods="2" coveredmethods="0"/>
+        <line num="1" count="1" type="stmt"/>
+        <line num="2" count="1" type="stmt"/>
+        <line num="3" count="1" type="stmt"/>
+        <line num="4" count="1" type="stmt"/>
+        <line num="5" count="1" type="stmt"/>
+        <line num="8" count="1" type="stmt"/>
         <line num="17" count="0" type="stmt"/>
         <line num="19" count="0" type="stmt"/>
         <line num="20" count="0" type="stmt"/>
@@ -341,17 +341,17 @@
       </file>
     </package>
     <package name="src.services">
-      <metrics statements="113" coveredstatements="0" conditionals="28" coveredconditionals="0" methods="44" coveredmethods="0"/>
+      <metrics statements="113" coveredstatements="21" conditionals="28" coveredconditionals="1" methods="44" coveredmethods="8"/>
       <file name="analysisEngine.ts" path="/Users/craigstroberg/myworkspace/gluten-free/gluten-free-substitutions/src/services/analysisEngine.ts">
-        <metrics statements="63" coveredstatements="0" conditionals="18" coveredconditionals="0" methods="27" coveredmethods="0"/>
-        <line num="2" count="0" type="stmt"/>
-        <line num="4" count="0" type="stmt"/>
-        <line num="5" count="0" type="stmt"/>
-        <line num="6" count="0" type="stmt"/>
-        <line num="9" count="0" type="stmt"/>
-        <line num="10" count="0" type="stmt"/>
-        <line num="11" count="0" type="stmt"/>
-        <line num="16" count="0" type="stmt"/>
+        <metrics statements="63" coveredstatements="8" conditionals="18" coveredconditionals="0" methods="27" coveredmethods="2"/>
+        <line num="2" count="6" type="stmt"/>
+        <line num="4" count="6" type="stmt"/>
+        <line num="5" count="35" type="stmt"/>
+        <line num="6" count="35" type="stmt"/>
+        <line num="9" count="35" type="stmt"/>
+        <line num="10" count="35" type="stmt"/>
+        <line num="11" count="35" type="stmt"/>
+        <line num="16" count="35" type="stmt"/>
         <line num="17" count="0" type="stmt"/>
         <line num="18" count="0" type="stmt"/>
         <line num="19" count="0" type="stmt"/>
@@ -409,8 +409,8 @@
         <line num="177" count="0" type="stmt"/>
       </file>
       <file name="exportService.ts" path="/Users/craigstroberg/myworkspace/gluten-free/gluten-free-substitutions/src/services/exportService.ts">
-        <metrics statements="30" coveredstatements="0" conditionals="4" coveredconditionals="0" methods="6" coveredmethods="0"/>
-        <line num="3" count="0" type="stmt"/>
+        <metrics statements="30" coveredstatements="1" conditionals="4" coveredconditionals="0" methods="6" coveredmethods="0"/>
+        <line num="3" count="4" type="stmt"/>
         <line num="5" count="0" type="stmt"/>
         <line num="7" count="0" type="stmt"/>
         <line num="8" count="0" type="stmt"/>
@@ -442,27 +442,27 @@
         <line num="69" count="0" type="stmt"/>
       </file>
       <file name="ingredientDatabase.ts" path="/Users/craigstroberg/myworkspace/gluten-free/gluten-free-substitutions/src/services/ingredientDatabase.ts">
-        <metrics statements="20" coveredstatements="0" conditionals="6" coveredconditionals="0" methods="11" coveredmethods="0"/>
-        <line num="2" count="0" type="stmt"/>
-        <line num="4" count="0" type="stmt"/>
-        <line num="5" count="0" type="stmt"/>
-        <line num="8" count="0" type="stmt"/>
-        <line num="12" count="0" type="stmt"/>
-        <line num="13" count="0" type="stmt"/>
+        <metrics statements="20" coveredstatements="12" conditionals="6" coveredconditionals="1" methods="11" coveredmethods="6"/>
+        <line num="2" count="5" type="stmt"/>
+        <line num="4" count="5" type="stmt"/>
+        <line num="5" count="8" type="stmt"/>
+        <line num="8" count="8" type="stmt"/>
+        <line num="12" count="3" type="stmt"/>
+        <line num="13" count="3" type="stmt"/>
         <line num="15" count="0" type="cond" truecount="0" falsecount="2"/>
         <line num="16" count="0" type="stmt"/>
         <line num="19" count="0" type="cond" truecount="0" falsecount="1"/>
         <line num="21" count="0" type="stmt"/>
-        <line num="35" count="0" type="stmt"/>
-        <line num="36" count="0" type="stmt"/>
-        <line num="39" count="0" type="stmt"/>
+        <line num="35" count="2" type="stmt"/>
+        <line num="36" count="2" type="stmt"/>
+        <line num="39" count="2" type="stmt"/>
         <line num="40" count="0" type="cond" truecount="0" falsecount="1"/>
         <line num="41" count="0" type="stmt"/>
         <line num="42" count="0" type="stmt"/>
         <line num="54" count="0" type="stmt"/>
-        <line num="58" count="0" type="stmt"/>
-        <line num="62" count="0" type="cond" truecount="0" falsecount="2"/>
-        <line num="66" count="0" type="stmt"/>
+        <line num="58" count="1" type="stmt"/>
+        <line num="62" count="2" type="cond" truecount="1" falsecount="1"/>
+        <line num="66" count="3" type="stmt"/>
       </file>
     </package>
     <package name="src.types">
@@ -473,25 +473,25 @@
       </file>
     </package>
     <package name="src.utils">
-      <metrics statements="13" coveredstatements="2" conditionals="1" coveredconditionals="1" methods="3" coveredmethods="1"/>
+      <metrics statements="13" coveredstatements="13" conditionals="1" coveredconditionals="1" methods="3" coveredmethods="3"/>
       <file name="idGenerator.ts" path="/Users/craigstroberg/myworkspace/gluten-free/gluten-free-substitutions/src/utils/idGenerator.ts">
         <metrics statements="2" coveredstatements="2" conditionals="1" coveredconditionals="1" methods="1" coveredmethods="1"/>
-        <line num="1" count="1" type="cond" truecount="1" falsecount="0"/>
+        <line num="1" count="3" type="cond" truecount="1" falsecount="0"/>
         <line num="2" count="5" type="stmt"/>
       </file>
       <file name="testUtils.tsx" path="/Users/craigstroberg/myworkspace/gluten-free/gluten-free-substitutions/src/utils/testUtils.tsx">
-        <metrics statements="11" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="0"/>
-        <line num="1" count="0" type="stmt"/>
-        <line num="2" count="0" type="stmt"/>
-        <line num="3" count="0" type="stmt"/>
-        <line num="4" count="0" type="stmt"/>
-        <line num="5" count="0" type="stmt"/>
-        <line num="7" count="0" type="stmt"/>
-        <line num="8" count="0" type="stmt"/>
-        <line num="17" count="0" type="stmt"/>
-        <line num="20" count="0" type="stmt"/>
-        <line num="22" count="0" type="stmt"/>
-        <line num="23" count="0" type="stmt"/>
+        <metrics statements="11" coveredstatements="11" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="2"/>
+        <line num="1" count="3" type="stmt"/>
+        <line num="2" count="3" type="stmt"/>
+        <line num="3" count="3" type="stmt"/>
+        <line num="4" count="3" type="stmt"/>
+        <line num="5" count="3" type="stmt"/>
+        <line num="7" count="3" type="stmt"/>
+        <line num="8" count="42" type="stmt"/>
+        <line num="17" count="3" type="stmt"/>
+        <line num="20" count="21" type="stmt"/>
+        <line num="22" count="3" type="stmt"/>
+        <line num="23" count="3" type="stmt"/>
       </file>
     </package>
   </project>
