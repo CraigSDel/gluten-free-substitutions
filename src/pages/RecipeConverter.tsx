@@ -1,18 +1,19 @@
-import React from 'react';
-import { useRecipe } from '../contexts/RecipeContext';
-import { RecipeInput } from '../components/recipe/RecipeInput';
-import { AnalysisResults } from '../components/recipe/AnalysisResults';
-import { LoadingSpinner } from '../components/ui/LoadingSpinner';
+import React from "react";
+import { useRecipe } from "../contexts/RecipeContext";
+import { RecipeInput } from "../components/recipe/RecipeInput";
+import { AnalysisResults } from "../components/recipe/AnalysisResults";
+import { LoadingSpinner } from "../components/ui/LoadingSpinner";
+import { RecipeAnalysis } from "../types";
 
 export const RecipeConverter: React.FC = () => {
-  const { 
-    currentRecipe, 
-    isLoading, 
-    error, 
-    analyzeRecipe, 
-    saveRecipe, 
-    exportRecipe, 
-    copyRecipe 
+  const {
+    currentRecipe,
+    isLoading,
+    error,
+    analyzeRecipe,
+    saveRecipe,
+    exportRecipe,
+    copyRecipe,
   } = useRecipe();
 
   const handleAnalyze = async (text: string) => {
@@ -64,7 +65,7 @@ export const RecipeConverter: React.FC = () => {
                 </div>
               ) : currentRecipe ? (
                 <AnalysisResults
-                  analysis={currentRecipe as any}
+                  analysis={currentRecipe as unknown as RecipeAnalysis}
                   onSave={saveRecipe}
                   onExport={exportRecipe}
                   onCopy={copyRecipe}

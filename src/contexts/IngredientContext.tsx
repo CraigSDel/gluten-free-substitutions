@@ -1,6 +1,13 @@
-import React, { createContext, useContext, useState, useCallback, useMemo, ReactNode } from 'react';
-import { GlutenFreeIngredient, Substitution } from '../types';
-import { IngredientDatabase } from '../services/ingredientDatabase';
+import React, {
+  createContext,
+  useContext,
+  useState,
+  useCallback,
+  useMemo,
+  ReactNode,
+} from "react";
+import { GlutenFreeIngredient, Substitution } from "../types";
+import { IngredientDatabase } from "../services/ingredientDatabase";
 
 interface IngredientContextType {
   ingredients: GlutenFreeIngredient[];
@@ -12,12 +19,14 @@ interface IngredientContextType {
   getIngredientsByCategory: (category: string) => string[];
 }
 
-const IngredientContext = createContext<IngredientContextType | undefined>(undefined);
+const IngredientContext = createContext<IngredientContextType | undefined>(
+  undefined,
+);
 
 export const useIngredient = () => {
   const context = useContext(IngredientContext);
   if (context === undefined) {
-    throw new Error('useIngredient must be used within an IngredientProvider');
+    throw new Error("useIngredient must be used within an IngredientProvider");
   }
   return context;
 };
@@ -26,35 +35,48 @@ interface IngredientProviderProps {
   children: ReactNode;
 }
 
-export const IngredientProvider: React.FC<IngredientProviderProps> = ({ children }) => {
+export const IngredientProvider: React.FC<IngredientProviderProps> = ({
+  children,
+}) => {
   const [ingredients] = useState<GlutenFreeIngredient[]>([]);
-  const [searchResults, setSearchResults] = useState<GlutenFreeIngredient[]>([]);
-  const [searchQuery, setSearchQuery] = useState('');
+  const [searchResults, setSearchResults] = useState<GlutenFreeIngredient[]>(
+    [],
+  );
+  const [searchQuery, setSearchQuery] = useState("");
 
   const ingredientDatabase = useMemo(() => new IngredientDatabase(), []);
 
-  const searchIngredients = useCallback((query: string) => {
-    setSearchQuery(query);
-    if (query.trim() === '') {
-      setSearchResults([]);
-      return;
-    }
-    
-    const results = ingredientDatabase.searchIngredients(query);
-    setSearchResults(results);
-  }, [ingredientDatabase]);
+  const searchIngredients = useCallback(
+    (query: string) => {
+      setSearchQuery(query);
+      if (query.trim() === "") {
+        setSearchResults([]);
+        return;
+      }
 
-  const getSubstitution = useCallback((ingredient: string) => {
-    return ingredientDatabase.findSubstitution(ingredient);
-  }, [ingredientDatabase]);
+      const results = ingredientDatabase.searchIngredients(query);
+      setSearchResults(results);
+    },
+    [ingredientDatabase],
+  );
+
+  const getSubstitution = useCallback(
+    (ingredient: string) => {
+      return ingredientDatabase.findSubstitution(ingredient);
+    },
+    [ingredientDatabase],
+  );
 
   const getAllCategories = useCallback(() => {
     return ingredientDatabase.getAllCategories();
   }, [ingredientDatabase]);
 
-  const getIngredientsByCategory = useCallback((category: string) => {
-    return ingredientDatabase.getIngredientsByCategory(category);
-  }, [ingredientDatabase]);
+  const getIngredientsByCategory = useCallback(
+    (category: string) => {
+      return ingredientDatabase.getIngredientsByCategory(category);
+    },
+    [ingredientDatabase],
+  );
 
   const value: IngredientContextType = {
     ingredients,
@@ -63,7 +85,7 @@ export const IngredientProvider: React.FC<IngredientProviderProps> = ({ children
     searchIngredients,
     getSubstitution,
     getAllCategories,
-    getIngredientsByCategory
+    getIngredientsByCategory,
   };
 
   return (

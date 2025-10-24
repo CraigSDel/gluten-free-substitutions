@@ -1,10 +1,16 @@
-import React, { createContext, useContext, useState, useCallback, ReactNode } from 'react';
+import React, {
+  createContext,
+  useContext,
+  useState,
+  useCallback,
+  ReactNode,
+} from "react";
 
 interface UIContextType {
-  theme: 'light' | 'dark';
+  theme: "light" | "dark";
   sidebarOpen: boolean;
   currentPage: string;
-  setTheme: (theme: 'light' | 'dark') => void;
+  setTheme: (theme: "light" | "dark") => void;
   toggleSidebar: () => void;
   setCurrentPage: (page: string) => void;
 }
@@ -14,7 +20,7 @@ const UIContext = createContext<UIContextType | undefined>(undefined);
 export const useUI = () => {
   const context = useContext(UIContext);
   if (context === undefined) {
-    throw new Error('useUI must be used within a UIProvider');
+    throw new Error("useUI must be used within a UIProvider");
   }
   return context;
 };
@@ -24,17 +30,17 @@ interface UIProviderProps {
 }
 
 export const UIProvider: React.FC<UIProviderProps> = ({ children }) => {
-  const [theme, setTheme] = useState<'light' | 'dark'>('light');
+  const [theme, setTheme] = useState<"light" | "dark">("light");
   const [sidebarOpen, setSidebarOpen] = useState(false);
-  const [currentPage, setCurrentPage] = useState('home');
+  const [currentPage, setCurrentPage] = useState("home");
 
-  const handleSetTheme = useCallback((newTheme: 'light' | 'dark') => {
+  const handleSetTheme = useCallback((newTheme: "light" | "dark") => {
     setTheme(newTheme);
-    localStorage.setItem('theme', newTheme);
+    localStorage.setItem("theme", newTheme);
   }, []);
 
   const toggleSidebar = useCallback(() => {
-    setSidebarOpen(prev => !prev);
+    setSidebarOpen((prev) => !prev);
   }, []);
 
   const handleSetCurrentPage = useCallback((page: string) => {
@@ -43,7 +49,7 @@ export const UIProvider: React.FC<UIProviderProps> = ({ children }) => {
 
   // Load theme from localStorage on mount
   React.useEffect(() => {
-    const savedTheme = localStorage.getItem('theme') as 'light' | 'dark' | null;
+    const savedTheme = localStorage.getItem("theme") as "light" | "dark" | null;
     if (savedTheme) {
       setTheme(savedTheme);
     }
@@ -55,12 +61,8 @@ export const UIProvider: React.FC<UIProviderProps> = ({ children }) => {
     currentPage,
     setTheme: handleSetTheme,
     toggleSidebar,
-    setCurrentPage: handleSetCurrentPage
+    setCurrentPage: handleSetCurrentPage,
   };
 
-  return (
-    <UIContext.Provider value={value}>
-      {children}
-    </UIContext.Provider>
-  );
+  return <UIContext.Provider value={value}>{children}</UIContext.Provider>;
 };

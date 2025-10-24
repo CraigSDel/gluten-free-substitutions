@@ -1,5 +1,5 @@
-import React from 'react';
-import cookingTipsData from '../data/cookingTips.json';
+import React from "react";
+import cookingTipsData from "../data/cookingTips.json";
 
 export const CookingTips: React.FC = () => {
   const tips = cookingTipsData.tips;
@@ -24,19 +24,19 @@ export const CookingTips: React.FC = () => {
                   <h3 className="text-lg font-semibold text-gray-900">
                     {tip.title}
                   </h3>
-                  <span className={`px-2 py-1 rounded-full text-xs font-medium ${
-                    tip.difficulty === 'easy' 
-                      ? 'bg-green-100 text-green-800'
-                      : tip.difficulty === 'medium'
-                      ? 'bg-yellow-100 text-yellow-800'
-                      : 'bg-red-100 text-red-800'
-                  }`}>
+                  <span
+                    className={`px-2 py-1 rounded-full text-xs font-medium ${
+                      tip.difficulty === "easy"
+                        ? "bg-green-100 text-green-800"
+                        : tip.difficulty === "medium"
+                          ? "bg-yellow-100 text-yellow-800"
+                          : "bg-red-100 text-red-800"
+                    }`}
+                  >
                     {tip.difficulty}
                   </span>
                 </div>
-                <p className="text-gray-700 mb-3">
-                  {tip.content}
-                </p>
+                <p className="text-gray-700 mb-3">{tip.content}</p>
                 <div className="flex items-center justify-between">
                   <span className="text-sm text-gray-500 capitalize">
                     {tip.category}
@@ -65,7 +65,9 @@ export const CookingTips: React.FC = () => {
                 <div className="w-12 h-12 bg-secondary-100 rounded-full flex items-center justify-center mx-auto mb-4">
                   <span className="text-secondary-600">🛡️</span>
                 </div>
-                <h3 className="font-semibold text-gray-900 mb-2">Safety First</h3>
+                <h3 className="font-semibold text-gray-900 mb-2">
+                  Safety First
+                </h3>
                 <p className="text-sm text-gray-600">
                   Preventing cross-contamination in your kitchen
                 </p>
@@ -74,7 +76,9 @@ export const CookingTips: React.FC = () => {
                 <div className="w-12 h-12 bg-primary-100 rounded-full flex items-center justify-center mx-auto mb-4">
                   <span className="text-primary-600">🍽️</span>
                 </div>
-                <h3 className="font-semibold text-gray-900 mb-2">Recipe Ideas</h3>
+                <h3 className="font-semibold text-gray-900 mb-2">
+                  Recipe Ideas
+                </h3>
                 <p className="text-sm text-gray-600">
                   Discover naturally gluten-free recipes and ingredients
                 </p>

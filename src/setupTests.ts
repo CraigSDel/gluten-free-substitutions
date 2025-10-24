@@ -21,7 +21,7 @@ global.IntersectionObserver = class IntersectionObserver {
   disconnect() {}
   observe() {}
   unobserve() {}
-} as any;
+} as unknown as typeof IntersectionObserver;
 
 // Mock ResizeObserver
 global.ResizeObserver = class ResizeObserver {
@@ -30,3 +30,48 @@ global.ResizeObserver = class ResizeObserver {
   observe() {}
   unobserve() {}
 };
+
+// Mock ingredients data
+jest.mock('./data/ingredients.json', () => ({
+  glutenIngredients: [
+    {
+      name: "all-purpose flour",
+      aliases: ["flour", "wheat flour", "plain flour"],
+      substitutions: [
+        {
+          name: "almond flour",
+          ratio: 1,
+          unit: "cup",
+          difficulty: "easy",
+          cookingNotes: "May need additional binding agent",
+          nutritionalImpact: "Higher protein, lower carbs",
+          confidence: 0.9
+        }
+      ]
+    },
+    {
+      name: "bread flour",
+      aliases: ["strong flour", "high-protein flour"],
+      substitutions: [
+        {
+          name: "gluten-free bread flour",
+          ratio: 1,
+          unit: "cup",
+          difficulty: "medium",
+          cookingNotes: "May need xanthan gum for structure",
+          nutritionalImpact: "Similar nutrition profile",
+          confidence: 0.85
+        }
+      ]
+    }
+  ],
+  categories: {
+    flour: ["all-purpose flour", "bread flour", "cake flour"],
+    grains: ["wheat", "barley", "rye"],
+    pasta: ["spaghetti", "penne", "fettuccine"],
+    breadcrumbs: ["panko", "bread crumbs"],
+    sauces: ["soy sauce", "teriyaki sauce"],
+    beverages: ["beer", "malt beverages"],
+    oats: ["oats", "oat flour"]
+  }
+}));

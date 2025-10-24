@@ -6,7 +6,7 @@ export interface Recipe {
   servings: number;
   prepTime: number;
   cookTime: number;
-  difficulty: 'easy' | 'medium' | 'hard';
+  difficulty: "easy" | "medium" | "hard";
   originalText: string;
   convertedText: string;
   substitutions: Substitution[];
@@ -30,7 +30,7 @@ export interface Substitution {
   substituteIngredient: string;
   ratio: number;
   unit: string;
-  difficulty: 'easy' | 'medium' | 'hard';
+  difficulty: "easy" | "medium" | "hard";
   cookingNotes: string;
   nutritionalImpact: string;
   confidence: number;
@@ -42,13 +42,13 @@ export interface GlutenFreeIngredient {
   substitutions: string[];
   ratio: number;
   notes: string;
-  difficulty: 'easy' | 'medium' | 'hard';
+  difficulty: "easy" | "medium" | "hard";
 }
 
 export interface RecipeAnalysis {
   hasGluten: boolean;
   glutenIngredients: Ingredient[];
-  difficulty: 'easy' | 'medium' | 'hard';
+  difficulty: "easy" | "medium" | "hard";
   substitutions: Substitution[];
   cookingTimeAdjustment: number;
   confidence: number;

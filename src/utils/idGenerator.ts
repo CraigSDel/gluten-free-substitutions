@@ -1,6 +1,3 @@
-let counter = 0;
-
-export const generateId = (prefix: string = 'id'): string => {
-  counter += 1;
-  return `${prefix}-${counter}`;
+export const generateId = (prefix: string = "id"): string => {
+  return `${prefix}-${Date.now()}-${Math.floor(Math.random() * 1000000)}`;
 };

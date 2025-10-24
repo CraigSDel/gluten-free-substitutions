@@ -1,5 +1,5 @@
-import React from 'react';
-import { Button } from '../components/ui/Button';
+import React from "react";
+import { Button } from "../components/ui/Button";
 
 export const About: React.FC = () => {
   return (
@@ -21,13 +21,14 @@ export const About: React.FC = () => {
                 Our Mission
               </h2>
               <p className="text-gray-700 mb-4">
-                We believe that everyone should be able to enjoy their favorite recipes, 
-                regardless of dietary restrictions. Our tool helps you convert any recipe 
-                to gluten-free with confidence and accuracy.
+                We believe that everyone should be able to enjoy their favorite
+                recipes, regardless of dietary restrictions. Our tool helps you
+                convert any recipe to gluten-free with confidence and accuracy.
               </p>
               <p className="text-gray-700">
-                Whether you have celiac disease, gluten intolerance, or simply choose to 
-                follow a gluten-free diet, we're here to make your cooking journey easier.
+                Whether you have celiac disease, gluten intolerance, or simply
+                choose to follow a gluten-free diet, we're here to make your
+                cooking journey easier.
               </p>
             </div>
             <div>
@@ -35,13 +36,13 @@ export const About: React.FC = () => {
                 Privacy First
               </h2>
               <p className="text-gray-700 mb-4">
-                We don't collect your personal data, require registration, or store your 
-                recipes on our servers. Everything is processed locally in your browser, 
-                ensuring your privacy is protected.
+                We don't collect your personal data, require registration, or
+                store your recipes on our servers. Everything is processed
+                locally in your browser, ensuring your privacy is protected.
               </p>
               <p className="text-gray-700">
-                Your recipe history is stored locally on your device and never transmitted 
-                to our servers.
+                Your recipe history is stored locally on your device and never
+                transmitted to our servers.
               </p>
             </div>
           </div>
@@ -52,14 +53,16 @@ export const About: React.FC = () => {
             </h2>
             <div className="bg-yellow-50 border border-yellow-200 rounded-lg p-6">
               <p className="text-gray-700 mb-4">
-                <strong>Important:</strong> This tool is for informational purposes only and is not 
-                intended as medical advice. Always consult with your healthcare provider before 
-                making significant dietary changes.
+                <strong>Important:</strong> This tool is for informational
+                purposes only and is not intended as medical advice. Always
+                consult with your healthcare provider before making significant
+                dietary changes.
               </p>
               <p className="text-gray-700">
-                While we strive to provide accurate substitution information, individual 
-                sensitivities may vary. Always read ingredient labels carefully and consult 
-                with a healthcare professional if you have concerns about specific ingredients.
+                While we strive to provide accurate substitution information,
+                individual sensitivities may vary. Always read ingredient labels
+                carefully and consult with a healthcare professional if you have
+                concerns about specific ingredients.
               </p>
             </div>
           </div>
@@ -73,18 +76,24 @@ export const About: React.FC = () => {
                 <div className="w-16 h-16 bg-primary-100 rounded-full flex items-center justify-center mx-auto mb-4">
                   <span className="text-2xl">🤖</span>
                 </div>
-                <h3 className="text-lg font-semibold mb-2">AI-Powered Analysis</h3>
+                <h3 className="text-lg font-semibold mb-2">
+                  AI-Powered Analysis
+                </h3>
                 <p className="text-gray-600">
-                  Our advanced algorithm identifies gluten-containing ingredients with high accuracy
+                  Our advanced algorithm identifies gluten-containing
+                  ingredients with high accuracy
                 </p>
               </div>
               <div className="text-center">
                 <div className="w-16 h-16 bg-secondary-100 rounded-full flex items-center justify-center mx-auto mb-4">
                   <span className="text-2xl">📊</span>
                 </div>
-                <h3 className="text-lg font-semibold mb-2">Tested Substitutions</h3>
+                <h3 className="text-lg font-semibold mb-2">
+                  Tested Substitutions
+                </h3>
                 <p className="text-gray-600">
-                  All substitution recommendations are based on tested ratios and cooking techniques
+                  All substitution recommendations are based on tested ratios
+                  and cooking techniques
                 </p>
               </div>
               <div className="text-center">
@@ -107,7 +116,7 @@ export const About: React.FC = () => {
               Try converting your first recipe today - it's completely free!
             </p>
             <Button
-              onClick={() => window.location.href = '/converter'}
+              onClick={() => (window.location.href = "/converter")}
               size="lg"
               className="px-8 py-3"
             >
