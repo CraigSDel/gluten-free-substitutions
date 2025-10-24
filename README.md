@@ -117,4 +117,4 @@ For support, please open an issue on GitHub or contact us at [email protected].
 
 ---
 
-Made with ❤️ for the gluten-free community.
+Made with ❤️ for the gluten-free community.# Deployment Trigger - Fri Oct 24 18:18:49 CEST 2025
