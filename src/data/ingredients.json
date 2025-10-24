@@ -1,564 +1,232 @@
 {
-  "glutenIngredients": [
+  "ingredients": [
     {
       "name": "wheat flour",
-      "category": "flour",
-      "aliases": ["all-purpose flour", "plain flour", "white flour", "bread flour", "cake flour", "self-rising flour", "whole wheat flour"],
+      "aliases": ["all-purpose flour", "plain flour", "white flour", "bread flour", "cake flour", "self-rising flour"],
       "substitutions": [
         {
           "ingredient": "almond flour",
           "ratio": 1.0,
-          "notes": "Use 1:1 ratio, may need more binding agent",
-          "difficulty": "easy"
+          "difficulty": "easy",
+          "tips": "Add xanthan gum for binding (1/4 tsp per cup)",
+          "whenToUse": "Baking, cookies, cakes",
+          "notes": "Higher in protein and healthy fats"
         },
         {
           "ingredient": "coconut flour",
           "ratio": 0.25,
-          "notes": "Use 1/4 the amount, very absorbent",
-          "difficulty": "medium"
+          "difficulty": "medium",
+          "tips": "Use 1/4 the amount, very absorbent - reduce liquid",
+          "whenToUse": "Baking, breads",
+          "notes": "Very high in fiber, absorbs more liquid"
         },
         {
           "ingredient": "gluten-free flour blend",
           "ratio": 1.0,
-          "notes": "Use 1:1 ratio, add xanthan gum for binding",
-          "difficulty": "easy"
-        },
-        {
-          "ingredient": "rice flour",
-          "ratio": 1.0,
-          "notes": "Use 1:1 ratio, may need binding agent",
-          "difficulty": "easy"
-        }
-      ]
-    },
-    {
-      "name": "all-purpose flour",
-      "category": "flour",
-      "aliases": ["plain flour", "white flour"],
-      "substitutions": [
-        {
-          "ingredient": "gluten-free flour blend",
-          "ratio": 1.0,
-          "notes": "Use 1:1 ratio, add xanthan gum for binding",
-          "difficulty": "easy"
-        },
-        {
-          "ingredient": "almond flour",
-          "ratio": 1.0,
-          "notes": "Use 1:1 ratio, may need more binding agent",
-          "difficulty": "easy"
-        }
-      ]
-    },
-    {
-      "name": "bread flour",
-      "category": "flour",
-      "aliases": ["strong flour", "high-gluten flour"],
-      "substitutions": [
-        {
-          "ingredient": "gluten-free bread flour",
-          "ratio": 1.0,
-          "notes": "Use 1:1 ratio, add vital wheat gluten substitute",
-          "difficulty": "medium"
-        }
-      ]
-    },
-    {
-      "name": "wheat",
-      "category": "grain",
-      "aliases": ["wheat berries", "wheat kernels"],
-      "substitutions": [
-        {
-          "ingredient": "quinoa",
-          "ratio": 1.0,
-          "notes": "Use 1:1 ratio, cook similarly",
-          "difficulty": "easy"
-        },
-        {
-          "ingredient": "buckwheat",
-          "ratio": 1.0,
-          "notes": "Use 1:1 ratio, naturally gluten-free",
-          "difficulty": "easy"
-        }
-      ]
-    },
-    {
-      "name": "barley",
-      "category": "grain",
-      "aliases": ["pearl barley", "hulled barley"],
-      "substitutions": [
-        {
-          "ingredient": "brown rice",
-          "ratio": 1.0,
-          "notes": "Use 1:1 ratio, similar texture",
-          "difficulty": "easy"
-        },
-        {
-          "ingredient": "quinoa",
-          "ratio": 1.0,
-          "notes": "Use 1:1 ratio, higher protein",
-          "difficulty": "easy"
-        }
-      ]
-    },
-    {
-      "name": "rye",
-      "category": "grain",
-      "aliases": ["rye flour", "rye berries"],
-      "substitutions": [
-        {
-          "ingredient": "buckwheat flour",
-          "ratio": 1.0,
-          "notes": "Use 1:1 ratio, similar earthy flavor",
-          "difficulty": "medium"
+          "difficulty": "easy",
+          "tips": "Use 1:1 ratio, add xanthan gum for binding",
+          "whenToUse": "Any baking application",
+          "notes": "Designed to replace wheat flour directly"
         }
       ]
     },
     {
       "name": "soy sauce",
-      "category": "sauce",
-      "aliases": ["shoyu", "tamari (if not gluten-free)"],
+      "aliases": ["soy sauce", "shoyu"],
       "substitutions": [
         {
-          "ingredient": "tamari (gluten-free)",
+          "ingredient": "tamari",
           "ratio": 1.0,
-          "notes": "Use 1:1 ratio, naturally gluten-free",
-          "difficulty": "easy"
+          "difficulty": "easy",
+          "tips": "Use same amount, naturally gluten-free",
+          "whenToUse": "Any recipe calling for soy sauce",
+          "notes": "Darker and richer flavor than soy sauce"
         },
         {
           "ingredient": "coconut aminos",
           "ratio": 1.0,
-          "notes": "Use 1:1 ratio, slightly sweeter",
-          "difficulty": "easy"
+          "difficulty": "easy",
+          "tips": "Use same amount, slightly sweeter flavor",
+          "whenToUse": "Stir-fries, marinades",
+          "notes": "Soy-free alternative, naturally gluten-free"
         }
       ]
     },
     {
       "name": "breadcrumbs",
-      "category": "breading",
-      "aliases": ["panko", "dried bread crumbs"],
+      "aliases": ["bread crumbs", "panko", "bread crumb coating"],
       "substitutions": [
         {
           "ingredient": "almond meal",
           "ratio": 1.0,
-          "notes": "Use 1:1 ratio, adds nutty flavor",
-          "difficulty": "easy"
+          "difficulty": "easy",
+          "tips": "Use same amount, adds nutty flavor",
+          "whenToUse": "Breading, meatballs, casseroles",
+          "notes": "Higher in protein and healthy fats"
         },
         {
-          "ingredient": "gluten-free breadcrumbs",
+          "ingredient": "crushed gluten-free crackers",
           "ratio": 1.0,
-          "notes": "Use 1:1 ratio, store-bought or homemade",
-          "difficulty": "easy"
+          "difficulty": "easy",
+          "tips": "Crush crackers finely, use same amount",
+          "whenToUse": "Breading, casseroles",
+          "notes": "Check labels for gluten-free certification"
         }
       ]
     },
     {
       "name": "pasta",
-      "category": "grain",
-      "aliases": ["spaghetti", "penne", "fettuccine", "macaroni"],
+      "aliases": ["spaghetti", "penne", "macaroni", "noodles"],
       "substitutions": [
         {
           "ingredient": "gluten-free pasta",
           "ratio": 1.0,
-          "notes": "Use 1:1 ratio, cook according to package directions",
-          "difficulty": "easy"
+          "difficulty": "easy",
+          "tips": "Cook in plenty of salted water, stir frequently",
+          "whenToUse": "Any pasta dish",
+          "notes": "Check labels for gluten-free certification"
         },
         {
           "ingredient": "zucchini noodles",
           "ratio": 1.0,
-          "notes": "Use 1:1 ratio, spiralize fresh zucchini",
-          "difficulty": "medium"
-        }
-      ]
-    },
-    {
-      "name": "beer",
-      "category": "beverage",
-      "aliases": ["ale", "lager", "stout"],
-      "substitutions": [
-        {
-          "ingredient": "gluten-free beer",
-          "ratio": 1.0,
-          "notes": "Use 1:1 ratio, check labels carefully",
-          "difficulty": "easy"
-        },
-        {
-          "ingredient": "chicken broth",
-          "ratio": 1.0,
-          "notes": "Use 1:1 ratio, for cooking applications",
-          "difficulty": "easy"
+          "difficulty": "easy",
+          "tips": "Spiralize zucchini, cook briefly or serve raw",
+          "whenToUse": "Light dishes, salads",
+          "notes": "Lower in carbs, higher in nutrients"
         }
       ]
     },
     {
       "name": "oats",
-      "category": "grain",
-      "aliases": ["rolled oats", "steel-cut oats", "oat flour", "quick oats"],
+      "aliases": ["oatmeal", "rolled oats", "steel-cut oats"],
       "substitutions": [
         {
-          "ingredient": "certified gluten-free oats",
+          "ingredient": "gluten-free oats",
           "ratio": 1.0,
-          "notes": "Use 1:1 ratio, ensure certified gluten-free",
-          "difficulty": "easy"
+          "difficulty": "easy",
+          "tips": "Use same amount, ensure gluten-free certification",
+          "whenToUse": "Oatmeal, baking, granola",
+          "notes": "Look for certified gluten-free oats"
         },
         {
           "ingredient": "quinoa flakes",
           "ratio": 1.0,
-          "notes": "Use 1:1 ratio, similar texture",
-          "difficulty": "easy"
+          "difficulty": "medium",
+          "tips": "Use same amount, cook slightly longer",
+          "whenToUse": "Oatmeal, baking",
+          "notes": "Higher in protein, naturally gluten-free"
         }
       ]
     },
     {
-      "name": "malt",
-      "category": "grain",
-      "aliases": ["malt extract", "malt syrup", "malt powder"],
+      "name": "beer",
+      "aliases": ["beer", "ale", "lager"],
       "substitutions": [
         {
-          "ingredient": "rice malt syrup",
+          "ingredient": "gluten-free beer",
           "ratio": 1.0,
-          "notes": "Use 1:1 ratio, similar sweetness",
-          "difficulty": "easy"
+          "difficulty": "easy",
+          "tips": "Use same amount, check gluten-free certification",
+          "whenToUse": "Cooking, marinades, beer batter",
+          "notes": "Many brands available, taste may vary"
         },
         {
-          "ingredient": "maple syrup",
-          "ratio": 0.75,
-          "notes": "Use 3/4 amount, adjust sweetness",
-          "difficulty": "easy"
+          "ingredient": "chicken broth",
+          "ratio": 1.0,
+          "difficulty": "easy",
+          "tips": "Use same amount, adds savory flavor",
+          "whenToUse": "Stews, braises, marinades",
+          "notes": "Gluten-free alternative for cooking"
         }
       ]
     },
     {
-      "name": "bulgur",
-      "category": "grain",
-      "aliases": ["bulgur wheat", "cracked wheat"],
+      "name": "flour tortillas",
+      "aliases": ["tortillas", "wraps", "flatbread"],
       "substitutions": [
         {
-          "ingredient": "quinoa",
+          "ingredient": "corn tortillas",
           "ratio": 1.0,
-          "notes": "Use 1:1 ratio, similar texture",
-          "difficulty": "easy"
+          "difficulty": "easy",
+          "tips": "Use same amount, warm before using",
+          "whenToUse": "Tacos, wraps, quesadillas",
+          "notes": "Naturally gluten-free, different texture"
         },
         {
-          "ingredient": "brown rice",
+          "ingredient": "lettuce leaves",
           "ratio": 1.0,
-          "notes": "Use 1:1 ratio, cook similarly",
-          "difficulty": "easy"
-        }
-      ]
-    },
-    {
-      "name": "couscous",
-      "category": "grain",
-      "aliases": ["pearl couscous", "Israeli couscous"],
-      "substitutions": [
-        {
-          "ingredient": "quinoa",
-          "ratio": 1.0,
-          "notes": "Use 1:1 ratio, similar texture",
-          "difficulty": "easy"
-        },
-        {
-          "ingredient": "rice",
-          "ratio": 1.0,
-          "notes": "Use 1:1 ratio, adjust cooking time",
-          "difficulty": "easy"
-        }
-      ]
-    },
-    {
-      "name": "semolina",
-      "category": "flour",
-      "aliases": ["durum wheat semolina"],
-      "substitutions": [
-        {
-          "ingredient": "cornmeal",
-          "ratio": 1.0,
-          "notes": "Use 1:1 ratio, similar texture",
-          "difficulty": "medium"
-        },
-        {
-          "ingredient": "rice flour",
-          "ratio": 1.0,
-          "notes": "Use 1:1 ratio, may need binding agent",
-          "difficulty": "medium"
-        }
-      ]
-    },
-    {
-      "name": "spelt",
-      "category": "flour",
-      "aliases": ["spelt flour", "spelt berries"],
-      "substitutions": [
-        {
-          "ingredient": "buckwheat flour",
-          "ratio": 1.0,
-          "notes": "Use 1:1 ratio, similar nutty flavor",
-          "difficulty": "easy"
-        },
-        {
-          "ingredient": "quinoa flour",
-          "ratio": 1.0,
-          "notes": "Use 1:1 ratio, high protein",
-          "difficulty": "easy"
-        }
-      ]
-    },
-    {
-      "name": "triticale",
-      "category": "grain",
-      "aliases": ["triticale flour", "triticale berries"],
-      "substitutions": [
-        {
-          "ingredient": "buckwheat flour",
-          "ratio": 1.0,
-          "notes": "Use 1:1 ratio, similar earthy flavor",
-          "difficulty": "medium"
-        },
-        {
-          "ingredient": "quinoa flour",
-          "ratio": 1.0,
-          "notes": "Use 1:1 ratio, high protein content",
-          "difficulty": "medium"
-        }
-      ]
-    },
-    {
-      "name": "wheat germ",
-      "category": "grain",
-      "aliases": ["wheat germ oil"],
-      "substitutions": [
-        {
-          "ingredient": "flaxseed meal",
-          "ratio": 1.0,
-          "notes": "Use 1:1 ratio, similar nutritional benefits",
-          "difficulty": "easy"
-        },
-        {
-          "ingredient": "chia seeds",
-          "ratio": 0.5,
-          "notes": "Use half amount, very absorbent",
-          "difficulty": "easy"
-        }
-      ]
-    },
-    {
-      "name": "wheat bran",
-      "category": "grain",
-      "aliases": ["bran"],
-      "substitutions": [
-        {
-          "ingredient": "rice bran",
-          "ratio": 1.0,
-          "notes": "Use 1:1 ratio, similar fiber content",
-          "difficulty": "easy"
-        },
-        {
-          "ingredient": "oat bran",
-          "ratio": 1.0,
-          "notes": "Use 1:1 ratio, ensure gluten-free oats",
-          "difficulty": "easy"
-        }
-      ]
-    },
-    {
-      "name": "wheat starch",
-      "category": "starch",
-      "aliases": ["wheat starch powder"],
-      "substitutions": [
-        {
-          "ingredient": "cornstarch",
-          "ratio": 1.0,
-          "notes": "Use 1:1 ratio, similar thickening properties",
-          "difficulty": "easy"
-        },
-        {
-          "ingredient": "arrowroot powder",
-          "ratio": 1.0,
-          "notes": "Use 1:1 ratio, clear when cooked",
-          "difficulty": "easy"
-        }
-      ]
-    },
-    {
-      "name": "vital wheat gluten",
-      "category": "protein",
-      "aliases": ["wheat gluten", "gluten flour"],
-      "substitutions": [
-        {
-          "ingredient": "psyllium husk powder",
-          "ratio": 0.25,
-          "notes": "Use 1/4 amount, excellent binding agent",
-          "difficulty": "hard"
-        },
-        {
-          "ingredient": "xanthan gum",
-          "ratio": 0.1,
-          "notes": "Use 1/10 amount, strong binding agent",
-          "difficulty": "hard"
-        }
-      ]
-    },
-    {
-      "name": "worcestershire sauce",
-      "category": "sauce",
-      "aliases": ["worcestershire"],
-      "substitutions": [
-        {
-          "ingredient": "gluten-free worcestershire sauce",
-          "ratio": 1.0,
-          "notes": "Use 1:1 ratio, check labels carefully",
-          "difficulty": "easy"
-        },
-        {
-          "ingredient": "tamari",
-          "ratio": 0.5,
-          "notes": "Use half amount, add vinegar and spices",
-          "difficulty": "medium"
-        }
-      ]
-    },
-    {
-      "name": "teriyaki sauce",
-      "category": "sauce",
-      "aliases": ["teriyaki"],
-      "substitutions": [
-        {
-          "ingredient": "gluten-free teriyaki sauce",
-          "ratio": 1.0,
-          "notes": "Use 1:1 ratio, check labels carefully",
-          "difficulty": "easy"
-        },
-        {
-          "ingredient": "tamari + honey + ginger",
-          "ratio": 1.0,
-          "notes": "Mix tamari, honey, and fresh ginger",
-          "difficulty": "medium"
-        }
-      ]
-    },
-    {
-      "name": "hoisin sauce",
-      "category": "sauce",
-      "aliases": ["hoisin"],
-      "substitutions": [
-        {
-          "ingredient": "gluten-free hoisin sauce",
-          "ratio": 1.0,
-          "notes": "Use 1:1 ratio, check labels carefully",
-          "difficulty": "easy"
-        },
-        {
-          "ingredient": "tamari + honey + sesame oil",
-          "ratio": 1.0,
-          "notes": "Mix tamari, honey, and sesame oil",
-          "difficulty": "medium"
-        }
-      ]
-    },
-    {
-      "name": "miso paste",
-      "category": "fermented",
-      "aliases": ["miso"],
-      "substitutions": [
-        {
-          "ingredient": "gluten-free miso paste",
-          "ratio": 1.0,
-          "notes": "Use 1:1 ratio, check labels carefully",
-          "difficulty": "easy"
-        },
-        {
-          "ingredient": "tamari",
-          "ratio": 0.5,
-          "notes": "Use half amount, add nutritional yeast",
-          "difficulty": "medium"
+          "difficulty": "easy",
+          "tips": "Use large leaves, wrap gently",
+          "whenToUse": "Wraps, tacos",
+          "notes": "Low-carb, fresh alternative"
         }
       ]
     },
     {
       "name": "bread",
-      "category": "baked",
-      "aliases": ["white bread", "whole wheat bread", "sourdough bread"],
+      "aliases": ["sandwich bread", "sliced bread", "loaf bread"],
       "substitutions": [
         {
           "ingredient": "gluten-free bread",
           "ratio": 1.0,
-          "notes": "Use 1:1 ratio, check labels carefully",
-          "difficulty": "easy"
+          "difficulty": "easy",
+          "tips": "Use same amount, toast for better texture",
+          "whenToUse": "Sandwiches, toast, croutons",
+          "notes": "Check labels for gluten-free certification"
         },
         {
-          "ingredient": "lettuce leaves",
+          "ingredient": "lettuce wraps",
           "ratio": 1.0,
-          "notes": "Use 1:1 ratio, for wraps and sandwiches",
-          "difficulty": "easy"
+          "difficulty": "easy",
+          "tips": "Use large lettuce leaves as wraps",
+          "whenToUse": "Sandwiches, burgers",
+          "notes": "Low-carb, fresh alternative"
         }
       ]
     },
     {
       "name": "crackers",
-      "category": "baked",
-      "aliases": ["saltine crackers", "wheat crackers", "graham crackers"],
+      "aliases": ["saltine crackers", "crackers", "snack crackers"],
       "substitutions": [
         {
           "ingredient": "gluten-free crackers",
           "ratio": 1.0,
-          "notes": "Use 1:1 ratio, check labels carefully",
-          "difficulty": "easy"
+          "difficulty": "easy",
+          "tips": "Use same amount, check gluten-free certification",
+          "whenToUse": "Snacking, cheese plates, soup toppers",
+          "notes": "Many brands available, taste may vary"
         },
         {
           "ingredient": "rice cakes",
           "ratio": 1.0,
-          "notes": "Use 1:1 ratio, similar crunch",
-          "difficulty": "easy"
+          "difficulty": "easy",
+          "tips": "Use same amount, different texture",
+          "whenToUse": "Snacking, spreads",
+          "notes": "Naturally gluten-free, different texture"
         }
       ]
     },
     {
       "name": "pretzels",
-      "category": "baked",
-      "aliases": ["soft pretzels", "hard pretzels"],
+      "aliases": ["pretzels", "soft pretzels", "pretzel sticks"],
       "substitutions": [
         {
           "ingredient": "gluten-free pretzels",
           "ratio": 1.0,
-          "notes": "Use 1:1 ratio, check labels carefully",
-          "difficulty": "easy"
+          "difficulty": "easy",
+          "tips": "Use same amount, check gluten-free certification",
+          "whenToUse": "Snacking, trail mix, baking",
+          "notes": "Many brands available, taste may vary"
         },
         {
           "ingredient": "nuts",
           "ratio": 1.0,
-          "notes": "Use 1:1 ratio, for snacking",
-          "difficulty": "easy"
-        }
-      ]
-    },
-    {
-      "name": "croutons",
-      "category": "baked",
-      "aliases": ["bread croutons"],
-      "substitutions": [
-        {
-          "ingredient": "gluten-free croutons",
-          "ratio": 1.0,
-          "notes": "Use 1:1 ratio, check labels carefully",
-          "difficulty": "easy"
-        },
-        {
-          "ingredient": "nuts",
-          "ratio": 1.0,
-          "notes": "Use 1:1 ratio, for salads",
-          "difficulty": "easy"
+          "difficulty": "easy",
+          "tips": "Use same amount, adds protein and healthy fats",
+          "whenToUse": "Snacking, trail mix",
+          "notes": "Naturally gluten-free, higher in protein"
         }
       ]
     }
-  ],
-  "categories": {
-    "flour": ["wheat flour", "all-purpose flour", "bread flour", "cake flour", "self-rising flour"],
-    "grains": ["wheat", "barley", "rye", "triticale", "bulgur", "couscous"],
-    "pasta": ["spaghetti", "penne", "fettuccine", "macaroni", "lasagna noodles"],
-    "breadcrumbs": ["breadcrumbs", "panko", "dried bread crumbs"],
-    "sauces": ["soy sauce", "worcestershire sauce", "teriyaki sauce"],
-    "beverages": ["beer", "ale", "lager", "stout"],
-    "oats": ["oats", "oat flour", "rolled oats", "steel-cut oats"]
-  }
+  ]
 }
