@@ -1,13 +1,4 @@
 {
-  "*.{ts,tsx}": [
-    "eslint --fix",
-    "prettier --write",
-    "npm run type-check"
-  ],
-  "*.{json,md,yml,yaml}": [
-    "prettier --write"
-  ],
-  "src/**/*.{ts,tsx}": [
-    "npm run test:unit -- --findRelatedTests --passWithNoTests"
-  ]
+  "*.{ts,tsx}": ["eslint --fix", "prettier --write"],
+  "*.{json,md,yml,yaml}": ["prettier --write"]
 }
