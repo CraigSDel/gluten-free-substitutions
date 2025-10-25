@@ -362,6 +362,595 @@
         "protein": "4g",
         "fat": "4g"
       }
+    },
+    {
+      "id": "pancakes",
+      "title": "Fluffy Gluten-Free Pancakes",
+      "description": "Light, fluffy pancakes that taste just like the real thing",
+      "difficulty": "easy",
+      "prepTime": 10,
+      "cookTime": 15,
+      "servings": 4,
+      "image": "/images/pancakes.jpg",
+      "ingredients": [
+        {
+          "id": "flour",
+          "name": "Gluten-free 1:1 flour blend",
+          "amount": "1 1/4 cups",
+          "checked": false
+        },
+        {
+          "id": "sugar",
+          "name": "Granulated sugar",
+          "amount": "2 tbsp",
+          "checked": false
+        },
+        {
+          "id": "baking-powder",
+          "name": "Baking powder",
+          "amount": "2 tsp",
+          "checked": false
+        },
+        {
+          "id": "salt",
+          "name": "Salt",
+          "amount": "1/2 tsp",
+          "checked": false
+        },
+        {
+          "id": "milk",
+          "name": "Milk (dairy or non-dairy)",
+          "amount": "1 cup",
+          "checked": false
+        },
+        {
+          "id": "egg",
+          "name": "Large egg",
+          "amount": "1",
+          "checked": false
+        },
+        {
+          "id": "butter",
+          "name": "Melted butter",
+          "amount": "2 tbsp",
+          "checked": false
+        },
+        {
+          "id": "vanilla",
+          "name": "Vanilla extract",
+          "amount": "1 tsp",
+          "checked": false
+        }
+      ],
+      "instructions": [
+        {
+          "id": "mix-dry",
+          "step": "In a large bowl, whisk together flour, sugar, baking powder, and salt.",
+          "checked": false
+        },
+        {
+          "id": "mix-wet",
+          "step": "In another bowl, whisk together milk, egg, melted butter, and vanilla.",
+          "checked": false
+        },
+        {
+          "id": "combine",
+          "step": "Pour wet ingredients into dry ingredients. Mix just until combined - don't overmix.",
+          "checked": false
+        },
+        {
+          "id": "rest",
+          "step": "Let batter rest for 5 minutes to thicken slightly.",
+          "checked": false
+        },
+        {
+          "id": "heat-pan",
+          "step": "Heat a griddle or large skillet over medium heat. Lightly grease with butter or oil.",
+          "checked": false
+        },
+        {
+          "id": "cook",
+          "step": "Pour 1/4 cup batter for each pancake. Cook until bubbles form on surface, about 2-3 minutes.",
+          "checked": false
+        },
+        {
+          "id": "flip",
+          "step": "Flip and cook until golden brown on other side, about 1-2 minutes more.",
+          "checked": false
+        },
+        {
+          "id": "serve",
+          "step": "Serve immediately with syrup, berries, or your favorite toppings.",
+          "checked": false
+        }
+      ],
+      "tips": [
+        "Don't overmix the batter - lumps are okay",
+        "Let the batter rest for fluffier pancakes",
+        "Cook on medium heat to prevent burning",
+        "Keep cooked pancakes warm in a 200°F oven"
+      ],
+      "nutrition": {
+        "calories": 180,
+        "carbs": "28g",
+        "protein": "6g",
+        "fat": "6g"
+      }
+    },
+    {
+      "id": "chicken-nuggets",
+      "title": "Crispy Gluten-Free Chicken Nuggets",
+      "description": "Crispy, golden chicken nuggets that are perfectly tender inside",
+      "difficulty": "medium",
+      "prepTime": 20,
+      "cookTime": 15,
+      "servings": 4,
+      "image": "/images/chicken-nuggets.jpg",
+      "ingredients": [
+        {
+          "id": "chicken",
+          "name": "Boneless chicken breast, cut into nuggets",
+          "amount": "1 lb",
+          "checked": false
+        },
+        {
+          "id": "flour",
+          "name": "Gluten-free 1:1 flour blend",
+          "amount": "1/2 cup",
+          "checked": false
+        },
+        {
+          "id": "cornstarch",
+          "name": "Cornstarch",
+          "amount": "1/4 cup",
+          "checked": false
+        },
+        {
+          "id": "breadcrumbs",
+          "name": "Gluten-free breadcrumbs",
+          "amount": "1 cup",
+          "checked": false
+        },
+        {
+          "id": "eggs",
+          "name": "Large eggs, beaten",
+          "amount": "2",
+          "checked": false
+        },
+        {
+          "id": "salt",
+          "name": "Salt",
+          "amount": "1 tsp",
+          "checked": false
+        },
+        {
+          "id": "pepper",
+          "name": "Black pepper",
+          "amount": "1/2 tsp",
+          "checked": false
+        },
+        {
+          "id": "paprika",
+          "name": "Paprika",
+          "amount": "1/2 tsp",
+          "checked": false
+        },
+        {
+          "id": "oil",
+          "name": "Vegetable oil for frying",
+          "amount": "2 cups",
+          "checked": false
+        }
+      ],
+      "instructions": [
+        {
+          "id": "prep-chicken",
+          "step": "Cut chicken breast into 1-inch nugget pieces. Season with salt and pepper.",
+          "checked": false
+        },
+        {
+          "id": "setup-breading",
+          "step": "Set up three bowls: flour/cornstarch mixture, beaten eggs, and breadcrumbs with seasonings.",
+          "checked": false
+        },
+        {
+          "id": "bread-chicken",
+          "step": "Dredge each nugget in flour, then egg, then breadcrumbs. Press breadcrumbs firmly.",
+          "checked": false
+        },
+        {
+          "id": "chill",
+          "step": "Place breaded nuggets on a plate and chill for 15 minutes to help coating stick.",
+          "checked": false
+        },
+        {
+          "id": "heat-oil",
+          "step": "Heat oil in a deep skillet to 350°F (175°C).",
+          "checked": false
+        },
+        {
+          "id": "fry",
+          "step": "Fry nuggets in batches for 3-4 minutes until golden brown and cooked through.",
+          "checked": false
+        },
+        {
+          "id": "drain",
+          "step": "Drain on paper towels to remove excess oil.",
+          "checked": false
+        },
+        {
+          "id": "serve",
+          "step": "Serve immediately with your favorite dipping sauce.",
+          "checked": false
+        }
+      ],
+      "tips": [
+        "Chill breaded nuggets before frying for better coating adhesion",
+        "Don't overcrowd the pan when frying",
+        "Use a thermometer to check oil temperature",
+        "Can be baked at 400°F for 15-20 minutes as a healthier option"
+      ],
+      "nutrition": {
+        "calories": 320,
+        "carbs": "18g",
+        "protein": "28g",
+        "fat": "16g"
+      }
+    },
+    {
+      "id": "brownies",
+      "title": "Fudgy Gluten-Free Brownies",
+      "description": "Rich, fudgy brownies with a perfect crackly top",
+      "difficulty": "easy",
+      "prepTime": 15,
+      "cookTime": 25,
+      "servings": 16,
+      "image": "/images/brownies.jpg",
+      "ingredients": [
+        {
+          "id": "butter",
+          "name": "Unsalted butter",
+          "amount": "1/2 cup",
+          "checked": false
+        },
+        {
+          "id": "chocolate",
+          "name": "Semi-sweet chocolate chips",
+          "amount": "4 oz",
+          "checked": false
+        },
+        {
+          "id": "sugar",
+          "name": "Granulated sugar",
+          "amount": "1 cup",
+          "checked": false
+        },
+        {
+          "id": "eggs",
+          "name": "Large eggs",
+          "amount": "2",
+          "checked": false
+        },
+        {
+          "id": "vanilla",
+          "name": "Vanilla extract",
+          "amount": "1 tsp",
+          "checked": false
+        },
+        {
+          "id": "flour",
+          "name": "Gluten-free 1:1 flour blend",
+          "amount": "1/2 cup",
+          "checked": false
+        },
+        {
+          "id": "cocoa",
+          "name": "Unsweetened cocoa powder",
+          "amount": "1/4 cup",
+          "checked": false
+        },
+        {
+          "id": "salt",
+          "name": "Salt",
+          "amount": "1/4 tsp",
+          "checked": false
+        }
+      ],
+      "instructions": [
+        {
+          "id": "preheat",
+          "step": "Preheat oven to 350°F (175°C). Line an 8x8 inch pan with parchment paper.",
+          "checked": false
+        },
+        {
+          "id": "melt-chocolate",
+          "step": "Melt butter and chocolate chips in a double boiler or microwave, stirring until smooth.",
+          "checked": false
+        },
+        {
+          "id": "mix-sugar",
+          "step": "Remove from heat and whisk in sugar until well combined.",
+          "checked": false
+        },
+        {
+          "id": "add-eggs",
+          "step": "Whisk in eggs one at a time, then vanilla extract.",
+          "checked": false
+        },
+        {
+          "id": "add-dry",
+          "step": "Sift in flour, cocoa powder, and salt. Fold gently until just combined.",
+          "checked": false
+        },
+        {
+          "id": "bake",
+          "step": "Pour batter into prepared pan. Bake for 20-25 minutes until toothpick has a few moist crumbs.",
+          "checked": false
+        },
+        {
+          "id": "cool",
+          "step": "Let cool completely in pan before cutting into squares.",
+          "checked": false
+        }
+      ],
+      "tips": [
+        "Don't overbake - brownies should be slightly underdone in center",
+        "Let cool completely before cutting for clean edges",
+        "Store covered at room temperature for up to 3 days",
+        "Can be frozen for up to 3 months"
+      ],
+      "nutrition": {
+        "calories": 180,
+        "carbs": "22g",
+        "protein": "3g",
+        "fat": "10g"
+      }
+    },
+    {
+      "id": "mac-and-cheese",
+      "title": "Creamy Gluten-Free Mac and Cheese",
+      "description": "Ultra-creamy mac and cheese with a golden breadcrumb topping",
+      "difficulty": "medium",
+      "prepTime": 15,
+      "cookTime": 30,
+      "servings": 6,
+      "image": "/images/mac-and-cheese.jpg",
+      "ingredients": [
+        {
+          "id": "pasta",
+          "name": "Gluten-free elbow pasta",
+          "amount": "12 oz",
+          "checked": false
+        },
+        {
+          "id": "butter",
+          "name": "Unsalted butter",
+          "amount": "3 tbsp",
+          "checked": false
+        },
+        {
+          "id": "flour",
+          "name": "Gluten-free 1:1 flour blend",
+          "amount": "3 tbsp",
+          "checked": false
+        },
+        {
+          "id": "milk",
+          "name": "Whole milk",
+          "amount": "2 cups",
+          "checked": false
+        },
+        {
+          "id": "cheddar",
+          "name": "Sharp cheddar cheese, shredded",
+          "amount": "2 cups",
+          "checked": false
+        },
+        {
+          "id": "parmesan",
+          "name": "Parmesan cheese, grated",
+          "amount": "1/2 cup",
+          "checked": false
+        },
+        {
+          "id": "salt",
+          "name": "Salt",
+          "amount": "1/2 tsp",
+          "checked": false
+        },
+        {
+          "id": "pepper",
+          "name": "Black pepper",
+          "amount": "1/4 tsp",
+          "checked": false
+        },
+        {
+          "id": "breadcrumbs",
+          "name": "Gluten-free breadcrumbs",
+          "amount": "1/2 cup",
+          "checked": false
+        }
+      ],
+      "instructions": [
+        {
+          "id": "cook-pasta",
+          "step": "Cook pasta according to package directions until al dente. Drain and set aside.",
+          "checked": false
+        },
+        {
+          "id": "make-roux",
+          "step": "Melt butter in a large saucepan over medium heat. Whisk in flour and cook for 1 minute.",
+          "checked": false
+        },
+        {
+          "id": "add-milk",
+          "step": "Gradually whisk in milk, cooking until sauce thickens, about 5 minutes.",
+          "checked": false
+        },
+        {
+          "id": "add-cheese",
+          "step": "Remove from heat and stir in cheddar and parmesan until melted and smooth.",
+          "checked": false
+        },
+        {
+          "id": "season",
+          "step": "Season with salt and pepper to taste.",
+          "checked": false
+        },
+        {
+          "id": "combine",
+          "step": "Add cooked pasta to cheese sauce and stir to combine.",
+          "checked": false
+        },
+        {
+          "id": "top-breadcrumbs",
+          "step": "Transfer to baking dish and top with breadcrumbs.",
+          "checked": false
+        },
+        {
+          "id": "bake",
+          "step": "Bake at 375°F for 15-20 minutes until golden and bubbly.",
+          "checked": false
+        }
+      ],
+      "tips": [
+        "Use room temperature cheese for easier melting",
+        "Don't overmix the cheese sauce to prevent graininess",
+        "Add a pinch of mustard powder for extra flavor",
+        "Can be made ahead and refrigerated before baking"
+      ],
+      "nutrition": {
+        "calories": 420,
+        "carbs": "45g",
+        "protein": "18g",
+        "fat": "18g"
+      }
+    },
+    {
+      "id": "quiche",
+      "title": "Gluten-Free Spinach Quiche",
+      "description": "Flaky crust quiche filled with spinach, cheese, and herbs",
+      "difficulty": "hard",
+      "prepTime": 30,
+      "cookTime": 45,
+      "servings": 8,
+      "image": "/images/quiche.jpg",
+      "ingredients": [
+        {
+          "id": "crust-flour",
+          "name": "Gluten-free 1:1 flour blend",
+          "amount": "1 1/4 cups",
+          "checked": false
+        },
+        {
+          "id": "butter",
+          "name": "Cold butter, cubed",
+          "amount": "1/2 cup",
+          "checked": false
+        },
+        {
+          "id": "ice-water",
+          "name": "Ice water",
+          "amount": "3-4 tbsp",
+          "checked": false
+        },
+        {
+          "id": "spinach",
+          "name": "Fresh spinach, chopped",
+          "amount": "2 cups",
+          "checked": false
+        },
+        {
+          "id": "eggs",
+          "name": "Large eggs",
+          "amount": "4",
+          "checked": false
+        },
+        {
+          "id": "cream",
+          "name": "Heavy cream",
+          "amount": "1 cup",
+          "checked": false
+        },
+        {
+          "id": "cheese",
+          "name": "Swiss cheese, shredded",
+          "amount": "1 cup",
+          "checked": false
+        },
+        {
+          "id": "onion",
+          "name": "Yellow onion, diced",
+          "amount": "1/2 cup",
+          "checked": false
+        },
+        {
+          "id": "salt",
+          "name": "Salt",
+          "amount": "1/2 tsp",
+          "checked": false
+        },
+        {
+          "id": "pepper",
+          "name": "Black pepper",
+          "amount": "1/4 tsp",
+          "checked": false
+        }
+      ],
+      "instructions": [
+        {
+          "id": "make-crust",
+          "step": "Make crust: Cut butter into flour until pea-sized. Add ice water 1 tbsp at a time until dough forms.",
+          "checked": false
+        },
+        {
+          "id": "chill-crust",
+          "step": "Wrap dough in plastic and chill for 30 minutes.",
+          "checked": false
+        },
+        {
+          "id": "roll-crust",
+          "step": "Roll dough between parchment papers. Fit into 9-inch pie pan. Chill 15 minutes.",
+          "checked": false
+        },
+        {
+          "id": "prebake",
+          "step": "Prebake crust at 375°F for 10 minutes with weights. Remove weights and bake 5 more minutes.",
+          "checked": false
+        },
+        {
+          "id": "cook-spinach",
+          "step": "Sauté onion until soft. Add spinach and cook until wilted. Cool slightly.",
+          "checked": false
+        },
+        {
+          "id": "make-filling",
+          "step": "Whisk eggs, cream, salt, and pepper. Stir in cheese and spinach mixture.",
+          "checked": false
+        },
+        {
+          "id": "bake-quiche",
+          "step": "Pour filling into crust. Bake at 375°F for 30-35 minutes until set.",
+          "checked": false
+        },
+        {
+          "id": "cool",
+          "step": "Let cool 10 minutes before slicing and serving.",
+          "checked": false
+        }
+      ],
+      "tips": [
+        "Keep all ingredients cold for flaky crust",
+        "Don't overwork the dough",
+        "Use pie weights or dried beans for prebaking",
+        "Let quiche cool slightly before cutting for clean slices"
+      ],
+      "nutrition": {
+        "calories": 280,
+        "carbs": "18g",
+        "protein": "12g",
+        "fat": "18g"
+      }
     }
   ]
 }

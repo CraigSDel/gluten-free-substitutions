@@ -50,9 +50,11 @@ export const HomePage: React.FC = () => {
                 Smart flour selection tool with personalized recommendations for
                 your recipes
               </p>
-              <Button variant="outline" className="w-full" disabled>
-                Coming Soon
-              </Button>
+              <Link to="/flour-guide">
+                <Button variant="outline" className="w-full">
+                  Open Flour Guide
+                </Button>
+              </Link>
             </div>
           </div>
         </div>
