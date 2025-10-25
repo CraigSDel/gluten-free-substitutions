@@ -1,11 +1,12 @@
-import React, { useState } from 'react';
-import { Button } from './ui/Button';
+import React, { useState } from "react";
+import { Button } from "./ui/Button";
+import flourRecommendationsData from "../data/flourRecommendations.json";
 
 interface RecipeCategory {
   id: string;
   name: string;
   description: string;
-  difficulty: 'easy' | 'medium' | 'hard';
+  difficulty: "easy" | "medium" | "hard";
   flourRecommendations: FlourRecommendation[];
 }
 
@@ -13,7 +14,7 @@ interface FlourRecommendation {
   flour: string;
   name: string;
   ratio: number;
-  difficulty: 'easy' | 'medium' | 'hard';
+  difficulty: "easy" | "medium" | "hard";
   pros: string[];
   cons: string[];
   tips: string[];
@@ -25,110 +26,28 @@ interface FlourSelectionToolProps {
   onRecommendationSelect?: (recommendation: FlourRecommendation) => void;
 }
 
-export const FlourSelectionTool: React.FC<FlourSelectionToolProps> = ({ onRecommendationSelect }) => {
-  const [selectedCategory, setSelectedCategory] = useState<RecipeCategory | null>(null);
-  const [selectedRecommendation, setSelectedRecommendation] = useState<FlourRecommendation | null>(null);
+export const FlourSelectionTool: React.FC<FlourSelectionToolProps> = ({
+  onRecommendationSelect,
+}) => {
+  const [selectedCategory, setSelectedCategory] =
+    useState<RecipeCategory | null>(null);
+  const [selectedRecommendation, setSelectedRecommendation] =
+    useState<FlourRecommendation | null>(null);
 
-  // Mock data - in real app, this would come from the JSON file
-  const recipeCategories: RecipeCategory[] = [
-    {
-      id: 'cookies',
-      name: 'Cookies',
-      description: 'Drop cookies, cut-out cookies, bar cookies',
-      difficulty: 'easy',
-      flourRecommendations: [
-        {
-          flour: 'gluten-free-1to1-blend',
-          name: 'Gluten-Free 1:1 Blend',
-          ratio: 1.0,
-          difficulty: 'easy',
-          pros: ['No recipe changes needed', 'Neutral flavor', 'Reliable results'],
-          cons: ['May be more expensive', 'Less control over ingredients'],
-          tips: [
-            'Use same amount as wheat flour',
-            'No additional binders needed',
-            'Let cookies cool completely before removing from pan'
-          ],
-          whenToUse: 'Best for beginners and when you want guaranteed results',
-          brands: ['Bob\'s Red Mill 1:1', 'King Arthur Measure for Measure', 'Cup4Cup']
-        },
-        {
-          flour: 'almond-flour',
-          name: 'Almond Flour',
-          ratio: 1.0,
-          difficulty: 'easy',
-          pros: ['Nutty flavor', 'Higher protein', 'Natural sweetness'],
-          cons: ['Denser texture', 'More expensive', 'Not suitable for nut allergies'],
-          tips: [
-            'Use same amount as wheat flour',
-            'Add 1/4 tsp xanthan gum per cup for binding',
-            'Cookies will be slightly chewier'
-          ],
-          whenToUse: 'When you want nutty flavor and don\'t mind denser texture',
-          brands: ['Bob\'s Red Mill', 'King Arthur', 'Blue Diamond']
-        }
-      ]
-    },
-    {
-      id: 'bread',
-      name: 'Bread',
-      description: 'Sandwich bread, artisan bread, dinner rolls',
-      difficulty: 'hard',
-      flourRecommendations: [
-        {
-          flour: 'gluten-free-bread-flour',
-          name: 'Gluten-Free Bread Flour',
-          ratio: 1.0,
-          difficulty: 'medium',
-          pros: ['Designed for bread', 'Better structure', 'Reliable rise'],
-          cons: ['More expensive', 'May need additional binders'],
-          tips: [
-            'Use same amount as wheat flour',
-            'Add 1 tsp xanthan gum per cup',
-            'Let rise in warm place',
-            'Bake until internal temp reaches 200°F'
-          ],
-          whenToUse: 'Best for sandwich bread and dinner rolls',
-          brands: ['King Arthur Gluten-Free Bread Flour', 'Bob\'s Red Mill Bread Mix']
-        }
-      ]
-    },
-    {
-      id: 'cake',
-      name: 'Cake',
-      description: 'Layer cakes, cupcakes, sheet cakes',
-      difficulty: 'medium',
-      flourRecommendations: [
-        {
-          flour: 'gluten-free-1to1-blend',
-          name: 'Gluten-Free 1:1 Blend',
-          ratio: 1.0,
-          difficulty: 'easy',
-          pros: ['No recipe changes', 'Reliable texture', 'Neutral flavor'],
-          cons: ['May be more expensive', 'Less control'],
-          tips: [
-            'Use same amount as wheat flour',
-            'Mix dry ingredients well',
-            'Don\'t overmix batter',
-            'Let cool completely before frosting'
-          ],
-          whenToUse: 'Best for beginners and when you want guaranteed results',
-          brands: ['Bob\'s Red Mill 1:1', 'King Arthur Measure for Measure']
-        }
-      ]
-    }
-  ];
+  // Use data from JSON file with type assertion
+  const recipeCategories: RecipeCategory[] =
+    flourRecommendationsData.recipeCategories as RecipeCategory[];
 
   const getDifficultyColor = (difficulty: string) => {
     switch (difficulty) {
-      case 'easy':
-        return 'bg-green-100 text-green-800 border-green-200';
-      case 'medium':
-        return 'bg-yellow-100 text-yellow-800 border-yellow-200';
-      case 'hard':
-        return 'bg-red-100 text-red-800 border-red-200';
+      case "easy":
+        return "bg-green-100 text-green-800 border-green-200";
+      case "medium":
+        return "bg-yellow-100 text-yellow-800 border-yellow-200";
+      case "hard":
+        return "bg-red-100 text-red-800 border-red-200";
       default:
-        return 'bg-gray-100 text-gray-800 border-gray-200';
+        return "bg-gray-100 text-gray-800 border-gray-200";
     }
   };
 
@@ -163,7 +82,7 @@ export const FlourSelectionTool: React.FC<FlourSelectionToolProps> = ({ onRecomm
           <p className="text-gray-600 mb-6">
             Select the type of recipe to get personalized flour recommendations.
           </p>
-          
+
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
             {recipeCategories.map((category) => (
               <button
@@ -172,9 +91,14 @@ export const FlourSelectionTool: React.FC<FlourSelectionToolProps> = ({ onRecomm
                 className="text-left p-4 border border-gray-200 rounded-lg hover:border-primary-300 hover:shadow-md transition-all"
               >
                 <div className="flex items-center justify-between mb-2">
-                  <h3 className="font-semibold text-gray-900">{category.name}</h3>
-                  <span className={`px-2 py-1 rounded-full text-xs font-medium border ${getDifficultyColor(category.difficulty)}`}>
-                    {category.difficulty.charAt(0).toUpperCase() + category.difficulty.slice(1)}
+                  <h3 className="font-semibold text-gray-900">
+                    {category.name}
+                  </h3>
+                  <span
+                    className={`px-2 py-1 rounded-full text-xs font-medium border ${getDifficultyColor(category.difficulty)}`}
+                  >
+                    {category.difficulty.charAt(0).toUpperCase() +
+                      category.difficulty.slice(1)}
                   </span>
                 </div>
                 <p className="text-sm text-gray-600">{category.description}</p>
@@ -200,69 +124,90 @@ export const FlourSelectionTool: React.FC<FlourSelectionToolProps> = ({ onRecomm
           </div>
 
           <div className="space-y-4">
-            {selectedCategory.flourRecommendations.map((recommendation, index) => (
-              <div
-                key={index}
-                className="border border-gray-200 rounded-lg p-4 hover:shadow-md transition-shadow"
-              >
-                <div className="flex items-start justify-between mb-3">
-                  <div>
-                    <h3 className="text-lg font-semibold text-gray-900">
-                      {recommendation.name}
-                    </h3>
-                    <p className="text-sm text-gray-600">
-                      Ratio: {recommendation.ratio === 1 ? '1:1' : `${recommendation.ratio}:1`}
+            {selectedCategory.flourRecommendations.map(
+              (recommendation, index) => (
+                <div
+                  key={index}
+                  className="border border-gray-200 rounded-lg p-4 hover:shadow-md transition-shadow"
+                >
+                  <div className="flex items-start justify-between mb-3">
+                    <div>
+                      <h3 className="text-lg font-semibold text-gray-900">
+                        {recommendation.name}
+                      </h3>
+                      <p className="text-sm text-gray-600">
+                        Ratio:{" "}
+                        {recommendation.ratio === 1
+                          ? "1:1"
+                          : `${recommendation.ratio}:1`}
+                      </p>
+                    </div>
+                    <span
+                      className={`px-2 py-1 rounded-full text-xs font-medium border ${getDifficultyColor(recommendation.difficulty)}`}
+                    >
+                      {recommendation.difficulty.charAt(0).toUpperCase() +
+                        recommendation.difficulty.slice(1)}
+                    </span>
+                  </div>
+
+                  <div className="grid md:grid-cols-2 gap-4 mb-4">
+                    <div>
+                      <h4 className="font-medium text-green-800 mb-2">
+                        ✅ Pros:
+                      </h4>
+                      <ul className="text-sm text-green-700 space-y-1">
+                        {recommendation.pros.map((pro, i) => (
+                          <li key={i}>• {pro}</li>
+                        ))}
+                      </ul>
+                    </div>
+                    <div>
+                      <h4 className="font-medium text-red-800 mb-2">
+                        ⚠️ Cons:
+                      </h4>
+                      <ul className="text-sm text-red-700 space-y-1">
+                        {recommendation.cons.map((con, i) => (
+                          <li key={i}>• {con}</li>
+                        ))}
+                      </ul>
+                    </div>
+                  </div>
+
+                  <div className="bg-blue-50 border border-blue-200 rounded p-3 mb-3">
+                    <h4 className="font-medium text-blue-800 mb-2">
+                      💡 When to Use:
+                    </h4>
+                    <p className="text-sm text-blue-700">
+                      {recommendation.whenToUse}
                     </p>
                   </div>
-                  <span className={`px-2 py-1 rounded-full text-xs font-medium border ${getDifficultyColor(recommendation.difficulty)}`}>
-                    {recommendation.difficulty.charAt(0).toUpperCase() + recommendation.difficulty.slice(1)}
-                  </span>
-                </div>
 
-                <div className="grid md:grid-cols-2 gap-4 mb-4">
-                  <div>
-                    <h4 className="font-medium text-green-800 mb-2">✅ Pros:</h4>
-                    <ul className="text-sm text-green-700 space-y-1">
-                      {recommendation.pros.map((pro, i) => (
-                        <li key={i}>• {pro}</li>
+                  <div className="mb-4">
+                    <h4 className="font-medium text-gray-800 mb-2">
+                      🏷️ Recommended Brands:
+                    </h4>
+                    <div className="flex flex-wrap gap-2">
+                      {recommendation.brands.map((brand, i) => (
+                        <span
+                          key={i}
+                          className="px-2 py-1 bg-gray-100 text-gray-700 rounded text-sm"
+                        >
+                          {brand}
+                        </span>
                       ))}
-                    </ul>
+                    </div>
                   </div>
-                  <div>
-                    <h4 className="font-medium text-red-800 mb-2">⚠️ Cons:</h4>
-                    <ul className="text-sm text-red-700 space-y-1">
-                      {recommendation.cons.map((con, i) => (
-                        <li key={i}>• {con}</li>
-                      ))}
-                    </ul>
-                  </div>
-                </div>
 
-                <div className="bg-blue-50 border border-blue-200 rounded p-3 mb-3">
-                  <h4 className="font-medium text-blue-800 mb-2">💡 When to Use:</h4>
-                  <p className="text-sm text-blue-700">{recommendation.whenToUse}</p>
+                  <Button
+                    onClick={() => handleRecommendationSelect(recommendation)}
+                    variant="primary"
+                    className="w-full"
+                  >
+                    Choose This Flour
+                  </Button>
                 </div>
-
-                <div className="mb-4">
-                  <h4 className="font-medium text-gray-800 mb-2">🏷️ Recommended Brands:</h4>
-                  <div className="flex flex-wrap gap-2">
-                    {recommendation.brands.map((brand, i) => (
-                      <span key={i} className="px-2 py-1 bg-gray-100 text-gray-700 rounded text-sm">
-                        {brand}
-                      </span>
-                    ))}
-                  </div>
-                </div>
-
-                <Button
-                  onClick={() => handleRecommendationSelect(recommendation)}
-                  variant="primary"
-                  className="w-full"
-                >
-                  Choose This Flour
-                </Button>
-              </div>
-            ))}
+              ),
+            )}
           </div>
         </div>
       )}
@@ -284,7 +229,9 @@ export const FlourSelectionTool: React.FC<FlourSelectionToolProps> = ({ onRecomm
 
           <div className="space-y-6">
             <div className="bg-green-50 border border-green-200 rounded-lg p-4">
-              <h3 className="font-semibold text-green-800 mb-3">📋 Step-by-Step Instructions:</h3>
+              <h3 className="font-semibold text-green-800 mb-3">
+                📋 Step-by-Step Instructions:
+              </h3>
               <ol className="space-y-2">
                 {selectedRecommendation.tips.map((tip, index) => (
                   <li key={index} className="text-green-700">
@@ -296,26 +243,38 @@ export const FlourSelectionTool: React.FC<FlourSelectionToolProps> = ({ onRecomm
 
             <div className="grid md:grid-cols-2 gap-6">
               <div>
-                <h3 className="font-semibold text-gray-800 mb-3">✅ What This Flour Does Well:</h3>
+                <h3 className="font-semibold text-gray-800 mb-3">
+                  ✅ What This Flour Does Well:
+                </h3>
                 <ul className="space-y-1">
                   {selectedRecommendation.pros.map((pro, i) => (
-                    <li key={i} className="text-sm text-gray-700">• {pro}</li>
+                    <li key={i} className="text-sm text-gray-700">
+                      • {pro}
+                    </li>
                   ))}
                 </ul>
               </div>
               <div>
-                <h3 className="font-semibold text-gray-800 mb-3">⚠️ Things to Watch For:</h3>
+                <h3 className="font-semibold text-gray-800 mb-3">
+                  ⚠️ Things to Watch For:
+                </h3>
                 <ul className="space-y-1">
                   {selectedRecommendation.cons.map((con, i) => (
-                    <li key={i} className="text-sm text-gray-700">• {con}</li>
+                    <li key={i} className="text-sm text-gray-700">
+                      • {con}
+                    </li>
                   ))}
                 </ul>
               </div>
             </div>
 
             <div className="bg-yellow-50 border border-yellow-200 rounded-lg p-4">
-              <h3 className="font-semibold text-yellow-800 mb-2">🎯 Pro Tip:</h3>
-              <p className="text-yellow-700">{selectedRecommendation.whenToUse}</p>
+              <h3 className="font-semibold text-yellow-800 mb-2">
+                🎯 Pro Tip:
+              </h3>
+              <p className="text-yellow-700">
+                {selectedRecommendation.whenToUse}
+              </p>
             </div>
           </div>
         </div>
