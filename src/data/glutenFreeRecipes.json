@@ -1,0 +1,367 @@
+{
+  "recipes": [
+    {
+      "id": "chocolate-chip-cookies",
+      "title": "Perfect Gluten-Free Chocolate Chip Cookies",
+      "description": "Soft, chewy chocolate chip cookies that taste just like the real thing",
+      "difficulty": "easy",
+      "prepTime": 15,
+      "cookTime": 12,
+      "servings": 24,
+      "image": "/images/chocolate-chip-cookies.jpg",
+      "ingredients": [
+        {
+          "id": "butter",
+          "name": "Unsalted butter, softened",
+          "amount": "1/2 cup",
+          "checked": false
+        },
+        {
+          "id": "brown-sugar",
+          "name": "Light brown sugar",
+          "amount": "1/2 cup",
+          "checked": false
+        },
+        {
+          "id": "white-sugar",
+          "name": "Granulated sugar",
+          "amount": "1/4 cup",
+          "checked": false
+        },
+        {
+          "id": "egg",
+          "name": "Large egg",
+          "amount": "1",
+          "checked": false
+        },
+        {
+          "id": "vanilla",
+          "name": "Pure vanilla extract",
+          "amount": "1 tsp",
+          "checked": false
+        },
+        {
+          "id": "flour",
+          "name": "Gluten-free 1:1 flour blend",
+          "amount": "1 1/4 cups",
+          "checked": false
+        },
+        {
+          "id": "baking-soda",
+          "name": "Baking soda",
+          "amount": "1/2 tsp",
+          "checked": false
+        },
+        {
+          "id": "salt",
+          "name": "Salt",
+          "amount": "1/2 tsp",
+          "checked": false
+        },
+        {
+          "id": "chocolate-chips",
+          "name": "Semi-sweet chocolate chips",
+          "amount": "1 cup",
+          "checked": false
+        }
+      ],
+      "instructions": [
+        {
+          "id": "preheat",
+          "step": "Preheat oven to 375°F (190°C). Line baking sheets with parchment paper.",
+          "checked": false
+        },
+        {
+          "id": "cream-butter",
+          "step": "In a large bowl, cream together butter, brown sugar, and granulated sugar until light and fluffy (2-3 minutes).",
+          "checked": false
+        },
+        {
+          "id": "add-egg",
+          "step": "Beat in egg and vanilla extract until well combined.",
+          "checked": false
+        },
+        {
+          "id": "mix-dry",
+          "step": "In a separate bowl, whisk together flour, baking soda, and salt.",
+          "checked": false
+        },
+        {
+          "id": "combine",
+          "step": "Gradually add dry ingredients to wet ingredients, mixing just until combined.",
+          "checked": false
+        },
+        {
+          "id": "add-chips",
+          "step": "Fold in chocolate chips.",
+          "checked": false
+        },
+        {
+          "id": "scoop",
+          "step": "Drop rounded tablespoons of dough onto prepared baking sheets, spacing 2 inches apart.",
+          "checked": false
+        },
+        {
+          "id": "bake",
+          "step": "Bake for 9-11 minutes until edges are golden brown. Centers may look slightly underdone.",
+          "checked": false
+        },
+        {
+          "id": "cool",
+          "step": "Let cookies cool on baking sheet for 2-3 minutes before transferring to wire rack.",
+          "checked": false
+        }
+      ],
+      "tips": [
+        "Don't overmix the dough - gluten-free flour can become tough if overworked",
+        "Let the dough rest for 10 minutes before baking for better texture",
+        "Store in airtight container for up to 5 days",
+        "Freeze unbaked dough balls for quick cookies later"
+      ],
+      "nutrition": {
+        "calories": 120,
+        "carbs": "16g",
+        "protein": "2g",
+        "fat": "6g"
+      }
+    },
+    {
+      "id": "banana-bread",
+      "title": "Moist Gluten-Free Banana Bread",
+      "description": "Classic banana bread that's perfectly moist and flavorful",
+      "difficulty": "easy",
+      "prepTime": 10,
+      "cookTime": 60,
+      "servings": 12,
+      "image": "/images/banana-bread.jpg",
+      "ingredients": [
+        {
+          "id": "bananas",
+          "name": "Very ripe bananas, mashed",
+          "amount": "3 medium",
+          "checked": false
+        },
+        {
+          "id": "butter",
+          "name": "Unsalted butter, melted",
+          "amount": "1/3 cup",
+          "checked": false
+        },
+        {
+          "id": "sugar",
+          "name": "Granulated sugar",
+          "amount": "1/2 cup",
+          "checked": false
+        },
+        {
+          "id": "egg",
+          "name": "Large egg",
+          "amount": "1",
+          "checked": false
+        },
+        {
+          "id": "vanilla",
+          "name": "Pure vanilla extract",
+          "amount": "1 tsp",
+          "checked": false
+        },
+        {
+          "id": "flour",
+          "name": "Gluten-free 1:1 flour blend",
+          "amount": "1 1/2 cups",
+          "checked": false
+        },
+        {
+          "id": "baking-soda",
+          "name": "Baking soda",
+          "amount": "1 tsp",
+          "checked": false
+        },
+        {
+          "id": "salt",
+          "name": "Salt",
+          "amount": "1/2 tsp",
+          "checked": false
+        },
+        {
+          "id": "walnuts",
+          "name": "Chopped walnuts (optional)",
+          "amount": "1/2 cup",
+          "checked": false
+        }
+      ],
+      "instructions": [
+        {
+          "id": "preheat",
+          "step": "Preheat oven to 350°F (175°C). Grease a 9x5 inch loaf pan.",
+          "checked": false
+        },
+        {
+          "id": "mash-bananas",
+          "step": "Mash bananas in a large bowl until smooth.",
+          "checked": false
+        },
+        {
+          "id": "mix-wet",
+          "step": "Add melted butter, sugar, egg, and vanilla to bananas. Mix well.",
+          "checked": false
+        },
+        {
+          "id": "mix-dry",
+          "step": "In a separate bowl, whisk together flour, baking soda, and salt.",
+          "checked": false
+        },
+        {
+          "id": "combine",
+          "step": "Add dry ingredients to wet ingredients. Mix just until combined - don't overmix.",
+          "checked": false
+        },
+        {
+          "id": "add-nuts",
+          "step": "Fold in walnuts if using.",
+          "checked": false
+        },
+        {
+          "id": "pour",
+          "step": "Pour batter into prepared loaf pan.",
+          "checked": false
+        },
+        {
+          "id": "bake",
+          "step": "Bake for 50-60 minutes until toothpick inserted in center comes out clean.",
+          "checked": false
+        },
+        {
+          "id": "cool",
+          "step": "Let cool in pan for 10 minutes, then remove to wire rack to cool completely.",
+          "checked": false
+        }
+      ],
+      "tips": [
+        "Use very ripe bananas with brown spots for best flavor",
+        "Don't overmix - gluten-free flour can become tough",
+        "Test doneness with toothpick - should come out clean",
+        "Wrap cooled bread in plastic wrap to keep moist"
+      ],
+      "nutrition": {
+        "calories": 180,
+        "carbs": "28g",
+        "protein": "3g",
+        "fat": "7g"
+      }
+    },
+    {
+      "id": "pizza-crust",
+      "title": "Crispy Gluten-Free Pizza Crust",
+      "description": "Thin, crispy pizza crust that holds up to your favorite toppings",
+      "difficulty": "medium",
+      "prepTime": 20,
+      "cookTime": 15,
+      "servings": 8,
+      "image": "/images/pizza-crust.jpg",
+      "ingredients": [
+        {
+          "id": "flour",
+          "name": "Gluten-free pizza flour blend",
+          "amount": "2 cups",
+          "checked": false
+        },
+        {
+          "id": "xanthan-gum",
+          "name": "Xanthan gum",
+          "amount": "1 tsp",
+          "checked": false
+        },
+        {
+          "id": "salt",
+          "name": "Salt",
+          "amount": "1 tsp",
+          "checked": false
+        },
+        {
+          "id": "yeast",
+          "name": "Active dry yeast",
+          "amount": "1 packet (2 1/4 tsp)",
+          "checked": false
+        },
+        {
+          "id": "sugar",
+          "name": "Sugar",
+          "amount": "1 tsp",
+          "checked": false
+        },
+        {
+          "id": "warm-water",
+          "name": "Warm water (110°F)",
+          "amount": "3/4 cup",
+          "checked": false
+        },
+        {
+          "id": "olive-oil",
+          "name": "Olive oil",
+          "amount": "2 tbsp",
+          "checked": false
+        }
+      ],
+      "instructions": [
+        {
+          "id": "activate-yeast",
+          "step": "In a small bowl, dissolve yeast and sugar in warm water. Let sit 5 minutes until foamy.",
+          "checked": false
+        },
+        {
+          "id": "mix-dry",
+          "step": "In a large bowl, whisk together flour, xanthan gum, and salt.",
+          "checked": false
+        },
+        {
+          "id": "add-wet",
+          "step": "Make a well in center. Add yeast mixture and olive oil. Mix until dough forms.",
+          "checked": false
+        },
+        {
+          "id": "knead",
+          "step": "Knead dough on floured surface for 3-4 minutes until smooth.",
+          "checked": false
+        },
+        {
+          "id": "rise",
+          "step": "Place in oiled bowl, cover, and let rise in warm place for 30 minutes.",
+          "checked": false
+        },
+        {
+          "id": "preheat",
+          "step": "Preheat oven to 450°F (230°C). Place pizza stone or baking sheet in oven.",
+          "checked": false
+        },
+        {
+          "id": "shape",
+          "step": "Roll dough between parchment papers to desired thickness.",
+          "checked": false
+        },
+        {
+          "id": "parbake",
+          "step": "Bake crust for 5-7 minutes until lightly golden.",
+          "checked": false
+        },
+        {
+          "id": "top-bake",
+          "step": "Add toppings and bake 8-10 minutes until cheese is melted and bubbly.",
+          "checked": false
+        }
+      ],
+      "tips": [
+        "Use warm water (110°F) to activate yeast properly",
+        "Don't skip the parbaking step - it prevents soggy crust",
+        "Roll between parchment papers to prevent sticking",
+        "Let dough rest if it's too sticky to work with"
+      ],
+      "nutrition": {
+        "calories": 150,
+        "carbs": "25g",
+        "protein": "4g",
+        "fat": "4g"
+      }
+    }
+  ]
+}

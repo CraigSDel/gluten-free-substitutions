@@ -1,16 +1,17 @@
-import React from 'react';
-import { Link, useLocation } from 'react-router-dom';
-import { Button } from '../ui/Button';
-import { Menu, X } from 'lucide-react';
-import { useState } from 'react';
+import React from "react";
+import { Link, useLocation } from "react-router-dom";
+import { Button } from "../ui/Button";
+import { Menu, X } from "lucide-react";
+import { useState } from "react";
 
 export const Header: React.FC = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const location = useLocation();
 
   const navigation = [
-    { name: 'Home', href: '/' },
-    { name: 'About', href: '/about' },
+    { name: "Home", href: "/" },
+    { name: "Recipes", href: "/recipes" },
+    { name: "About", href: "/about" },
   ];
 
   const isActive = (href: string) => {
@@ -39,8 +40,8 @@ export const Header: React.FC = () => {
                 to={item.href}
                 className={`px-3 py-2 rounded-md text-sm font-medium transition-colors ${
                   isActive(item.href)
-                    ? 'text-primary-600 bg-primary-50'
-                    : 'text-gray-700 hover:text-primary-600 hover:bg-gray-50'
+                    ? "text-primary-600 bg-primary-50"
+                    : "text-gray-700 hover:text-primary-600 hover:bg-gray-50"
                 }`}
               >
                 {item.name}
@@ -70,8 +71,8 @@ export const Header: React.FC = () => {
                   to={item.href}
                   className={`block px-3 py-2 rounded-md text-base font-medium transition-colors ${
                     isActive(item.href)
-                      ? 'text-primary-600 bg-primary-50'
-                      : 'text-gray-700 hover:text-primary-600 hover:bg-gray-50'
+                      ? "text-primary-600 bg-primary-50"
+                      : "text-gray-700 hover:text-primary-600 hover:bg-gray-50"
                   }`}
                   onClick={() => setIsMenuOpen(false)}
                 >
