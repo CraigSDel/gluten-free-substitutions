@@ -1,0 +1,217 @@
+{
+  "recipeCategories": [
+    {
+      "id": "cookies",
+      "name": "Cookies",
+      "description": "Drop cookies, cut-out cookies, bar cookies",
+      "difficulty": "easy",
+      "flourRecommendations": [
+        {
+          "flour": "gluten-free-1to1-blend",
+          "name": "Gluten-Free 1:1 Blend",
+          "ratio": 1.0,
+          "difficulty": "easy",
+          "pros": ["No recipe changes needed", "Neutral flavor", "Reliable results"],
+          "cons": ["May be more expensive", "Less control over ingredients"],
+          "tips": [
+            "Use same amount as wheat flour",
+            "No additional binders needed",
+            "Let cookies cool completely before removing from pan"
+          ],
+          "whenToUse": "Best for beginners and when you want guaranteed results",
+          "brands": ["Bob's Red Mill 1:1", "King Arthur Measure for Measure", "Cup4Cup"]
+        },
+        {
+          "flour": "almond-flour",
+          "name": "Almond Flour",
+          "ratio": 1.0,
+          "difficulty": "easy",
+          "pros": ["Nutty flavor", "Higher protein", "Natural sweetness"],
+          "cons": ["Denser texture", "More expensive", "Not suitable for nut allergies"],
+          "tips": [
+            "Use same amount as wheat flour",
+            "Add 1/4 tsp xanthan gum per cup for binding",
+            "Cookies will be slightly chewier"
+          ],
+          "whenToUse": "When you want nutty flavor and don't mind denser texture",
+          "brands": ["Bob's Red Mill", "King Arthur", "Blue Diamond"]
+        },
+        {
+          "flour": "coconut-flour",
+          "name": "Coconut Flour",
+          "ratio": 0.25,
+          "difficulty": "medium",
+          "pros": ["Very absorbent", "High fiber", "Natural sweetness"],
+          "cons": ["Requires more eggs", "Coconut flavor", "Can be crumbly"],
+          "tips": [
+            "Use 1/4 the amount of wheat flour",
+            "Add 1 extra egg per 1/4 cup flour",
+            "Let batter rest 5 minutes before baking"
+          ],
+          "whenToUse": "When you want high-fiber cookies with coconut flavor",
+          "brands": ["Bob's Red Mill", "King Arthur", "Nutiva"]
+        }
+      ]
+    },
+    {
+      "id": "bread",
+      "name": "Bread",
+      "description": "Sandwich bread, artisan bread, dinner rolls",
+      "difficulty": "hard",
+      "flourRecommendations": [
+        {
+          "flour": "gluten-free-bread-flour",
+          "name": "Gluten-Free Bread Flour",
+          "ratio": 1.0,
+          "difficulty": "medium",
+          "pros": ["Designed for bread", "Better structure", "Reliable rise"],
+          "cons": ["More expensive", "May need additional binders"],
+          "tips": [
+            "Use same amount as wheat flour",
+            "Add 1 tsp xanthan gum per cup",
+            "Let rise in warm place",
+            "Bake until internal temp reaches 200°F"
+          ],
+          "whenToUse": "Best for sandwich bread and dinner rolls",
+          "brands": ["King Arthur Gluten-Free Bread Flour", "Bob's Red Mill Bread Mix"]
+        },
+        {
+          "flour": "custom-blend",
+          "name": "Custom Flour Blend",
+          "ratio": 1.0,
+          "difficulty": "hard",
+          "pros": ["Full control", "Customizable", "Cost effective"],
+          "cons": ["Requires knowledge", "Trial and error", "Complex"],
+          "tips": [
+            "Mix: 40% rice flour, 30% sorghum, 20% starch, 10% protein flour",
+            "Add 1 tsp xanthan gum per cup",
+            "Let dough rest 30 minutes before shaping",
+            "Use bread machine or stand mixer"
+          ],
+          "whenToUse": "When you want full control and are willing to experiment",
+          "brands": ["Make your own blend"]
+        }
+      ]
+    },
+    {
+      "id": "cake",
+      "name": "Cake",
+      "description": "Layer cakes, cupcakes, sheet cakes",
+      "difficulty": "medium",
+      "flourRecommendations": [
+        {
+          "flour": "gluten-free-1to1-blend",
+          "name": "Gluten-Free 1:1 Blend",
+          "ratio": 1.0,
+          "difficulty": "easy",
+          "pros": ["No recipe changes", "Reliable texture", "Neutral flavor"],
+          "cons": ["May be more expensive", "Less control"],
+          "tips": [
+            "Use same amount as wheat flour",
+            "Mix dry ingredients well",
+            "Don't overmix batter",
+            "Let cool completely before frosting"
+          ],
+          "whenToUse": "Best for beginners and when you want guaranteed results",
+          "brands": ["Bob's Red Mill 1:1", "King Arthur Measure for Measure"]
+        },
+        {
+          "flour": "almond-flour",
+          "name": "Almond Flour",
+          "ratio": 1.0,
+          "difficulty": "medium",
+          "pros": ["Moist texture", "Nutty flavor", "Higher protein"],
+          "cons": ["Denser texture", "More expensive", "Not for nut allergies"],
+          "tips": [
+            "Use same amount as wheat flour",
+            "Add 1/4 tsp xanthan gum per cup",
+            "Reduce sugar by 1/4 cup",
+            "Bake at 25°F lower temperature"
+          ],
+          "whenToUse": "When you want moist, dense cake with nutty flavor",
+          "brands": ["Bob's Red Mill", "King Arthur", "Blue Diamond"]
+        }
+      ]
+    },
+    {
+      "id": "pizza",
+      "name": "Pizza",
+      "description": "Pizza crust, flatbread, focaccia",
+      "difficulty": "hard",
+      "flourRecommendations": [
+        {
+          "flour": "gluten-free-pizza-flour",
+          "name": "Gluten-Free Pizza Flour",
+          "ratio": 1.0,
+          "difficulty": "medium",
+          "pros": ["Designed for pizza", "Better texture", "Easier to work with"],
+          "cons": ["More expensive", "May need additional binders"],
+          "tips": [
+            "Use same amount as wheat flour",
+            "Add 1 tsp xanthan gum per cup",
+            "Let dough rest 30 minutes",
+            "Roll between parchment paper"
+          ],
+          "whenToUse": "Best for pizza and flatbread",
+          "brands": ["King Arthur Gluten-Free Pizza Flour", "Bob's Red Mill Pizza Mix"]
+        },
+        {
+          "flour": "custom-blend",
+          "name": "Custom Flour Blend",
+          "ratio": 1.0,
+          "difficulty": "hard",
+          "pros": ["Full control", "Customizable", "Cost effective"],
+          "cons": ["Requires knowledge", "Trial and error"],
+          "tips": [
+            "Mix: 50% rice flour, 25% sorghum, 25% starch",
+            "Add 1 tsp xanthan gum per cup",
+            "Let dough rest 30 minutes",
+            "Use wet hands to shape"
+          ],
+          "whenToUse": "When you want full control and are willing to experiment",
+          "brands": ["Make your own blend"]
+        }
+      ]
+    },
+    {
+      "id": "muffins",
+      "name": "Muffins",
+      "description": "Breakfast muffins, quick breads, scones",
+      "difficulty": "easy",
+      "flourRecommendations": [
+        {
+          "flour": "gluten-free-1to1-blend",
+          "name": "Gluten-Free 1:1 Blend",
+          "ratio": 1.0,
+          "difficulty": "easy",
+          "pros": ["No recipe changes", "Reliable results", "Neutral flavor"],
+          "cons": ["May be more expensive"],
+          "tips": [
+            "Use same amount as wheat flour",
+            "Don't overmix batter",
+            "Fill muffin cups 3/4 full",
+            "Let cool 5 minutes before removing"
+          ],
+          "whenToUse": "Best for beginners and when you want guaranteed results",
+          "brands": ["Bob's Red Mill 1:1", "King Arthur Measure for Measure"]
+        },
+        {
+          "flour": "almond-flour",
+          "name": "Almond Flour",
+          "ratio": 1.0,
+          "difficulty": "easy",
+          "pros": ["Nutty flavor", "Higher protein", "Moist texture"],
+          "cons": ["Denser texture", "More expensive"],
+          "tips": [
+            "Use same amount as wheat flour",
+            "Add 1/4 tsp xanthan gum per cup",
+            "Reduce sugar by 1/4 cup",
+            "Bake at 25°F lower temperature"
+          ],
+          "whenToUse": "When you want nutty flavor and don't mind denser texture",
+          "brands": ["Bob's Red Mill", "King Arthur", "Blue Diamond"]
+        }
+      ]
+    }
+  ]
+}

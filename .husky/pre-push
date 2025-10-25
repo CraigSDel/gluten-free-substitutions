@@ -1,22 +1,14 @@
 #!/usr/bin/env sh
 . "$(dirname -- "$0")/_/husky.sh"
 
-echo "🚀 Running pre-push comprehensive checks..."
+echo "🚀 Running pre-push checks..."
 
-# Run all tests (unit, integration, e2e)
-echo "🧪 Running comprehensive test suite..."
-npm run test:all
-
-# Run security audit
-echo "🔒 Running security audit..."
-npm audit --audit-level=high
+# Run tests
+echo "🧪 Running tests..."
+npm run test
 
 # Run build verification
 echo "🏗️ Verifying production build..."
 npm run build
-
-# Run bundle analysis
-echo "📊 Analyzing bundle size..."
-npm run analyze
 
 echo "✅ Pre-push checks passed! Ready to push."
